@@ -1,0 +1,1011 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="format-detection" content="telephone=no" />
+    <!-- 页面公共 css -->
+    <link rel="stylesheet" type="text/css" href="../../public/css/common.css" />
+    <link rel="stylesheet" type="text/css" href="../../public/css/menu.css" />
+    <link rel="stylesheet" type="text/css" href="../../public/css/blueHeader.css" />
+    <link rel="stylesheet" type="text/css" href="../../public/lib/css/animate.css" />
+    <link rel="stylesheet" type="text/css" href="../../public/css/robot.css" />
+    
+    <title>开放的教育生态（小学）</title>
+    <!-- 引入css外链 -->
+    
+    <!-- 合并当前页面的style -->
+    <style type="text/css">/* 编写 CSS 样式代码 */
+body{
+	background:#fff
+}
+.ygMenu .ygHeader{
+	/*max-width:82%;*/
+}
+
+.imgList{
+    width: 100%;
+    background:#fff
+}
+.kindGarten .imgList{
+	background:#fbfaf6;
+}
+.imgList img{
+    width: 100%;
+    display: block;
+}
+.imgList .learnMore{
+	text-align:center;
+  	line-height:38px;
+  	font-size:16px;
+  	width:110px;
+  	display:block;
+  	margin:0 auto;
+  	background:#0258bf;
+    border-radius:8px;
+  	color:#fff;
+}
+.imgList .learnMore:hover{
+	background:#0577ff
+}
+.primaryCommon .imgList .learnMore{
+	background:#3fb0c7
+}
+.kindGarten .imgList .learnMore{
+	background:#65a951
+}
+.middleCommon .imgList .learnMore{
+	background:#4192de
+}
+
+.kindGarten .imgList .learnMore{
+	font-size:18px;
+}
+.kindGarten .yg-know-more {
+    background: #fbfaf6 !important;
+}
+
+
+
+
+@media screen and (max-width:768px){
+	.imgList .imgListContent{
+        padding-top:44px;
+    }
+}.yg-know-more {
+    position: relative;
+    width: 100%;
+    background: #f9f9f9;
+    overflow: hidden;
+    z-index: 10
+}
+
+.yg-know-more .yg-learn-more-contain {
+    width: 100%;
+
+    z-index: 25;
+    padding-right: 1.2vw;
+    margin: 0 auto;
+    position: relative;
+    text-align: center;
+    color: #999;
+    font-size: 1vw;
+    top: 5vw;
+}
+
+.yg-know-more .yg-learn-more-contain .yg-learn-more-title {
+    font-size: 32px;
+    color: #666;
+    font-weight: normal;
+}
+
+.yg-know-more .yg-learn-more-contain .yg-learn-more-tips {
+    line-height: 30px;
+    margin: 1.8rem 0 1rem;
+    font-size: 16px;
+}
+
+.yg-know-more .yg-learn-more-contain .yg-learn-more-button .register {
+    cursor: pointer;
+    padding: 0.5vw 4.2vw;
+    font-size: 18px;
+    border: 1px solid transparent;
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    color: #fff;
+    background: #0258bf;
+    text-decoration: none;
+}
+
+.yg-know-more .yg-footer {
+    position: relative;
+    width: 100%;
+}
+
+.yg-know-more .yg-footer .yg-footer-cover {
+    width: 100%;
+    position: relative;
+    z-index: 23;
+    display: block;
+}
+
+.yg-know-more .yg-footer .yg-footer-cover-mobile {
+    display: none
+}
+
+.yg-know-more .yg-footer-text {
+    position: absolute;
+    bottom: 0;
+    z-index: 24;
+    width: 80%;
+    overflow: hidden;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+
+}
+
+.yg-know-more .yg-footer-text .yg-footer-text-left {
+    float: left;
+}
+
+.yg-know-more .yg-footer-text .yg-footer-text-right {
+    float: left;
+    margin-left: 2vw;
+    color: #fff;
+    width: 84%;
+}
+
+.yg-know-more .yg-footer-text .yg-footer-text-right-top {
+    display: flex;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -o-flex;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    padding-bottom: 2%;
+    margin-bottom: 1%;
+    align-items: center;
+    justify-items: center;
+    justify-content: space-between;
+    /*fix*/
+}
+
+/*.yg-know-more .yg-footer-text .yg-footer-text-right-top p {
+    -webkit-flex: 1;
+    -moz-flex: 1;
+  padding-left:4vw;
+  
+}*/
+.yg-know-more .yg-footer-white {
+    color: #fff;
+}
+
+.yg-know-more .yg-footer-gray {
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 12px;
+    font-style: normal;
+}
+
+.yg-know-more .yg-footer-text-right-top .warm-link-title {
+    font-size: 12px;
+    text-align: left;
+    margin-bottom: 8px;
+    display: block;
+    padding-left: 4vw;
+
+}
+
+.yg-know-more .yg-footer-text-right-top .warm-link-detail {
+    padding-left: 4vw;
+    border-left: 1px solid rgba(255, 255, 255, 0.2);
+    border-right: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.yg-know-more .yg-footer-text-right-top .warm-link-detail a {
+    display: block;
+    line-height: 24px;
+    color: rgba(255, 255, 255, 0.5)
+}
+
+.yg-know-more .yg-footer-text-right-top .warm-link-detail a:hover {
+    color: #fff;
+    transition: color .4s ease;
+    -webkit-transition: color .4s ease;
+}
+
+.yg-know-more .yg-footer-text-right-top .connect-us-title {
+    font-size: 12px;
+    text-align: center;
+    padding-left: 4vw;
+}
+
+.yg-know-more .yg-footer-text .yg-footer-text-right-top .lianxiwomen a {
+    color: rgba(255, 255, 255, 1)
+}
+
+.yg-know-more .yg-footer-text-right-top .connect-us-detail {
+    font-style: normal;
+    display: inline-block;
+
+}
+
+.yg-know-more .yg-footer-text-right-top .connectEmail {
+    padding: 1vw 4vw;
+}
+
+.yg-know-more .yg-footer-text-right-top .connectCoopration .yg-footer-icon {
+    font-size: 12px;
+}
+
+.yg-know-more .yg-footer-icon {
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.5)
+}
+
+/*底部权限*/
+.yg-footer-text-right-bottom {
+    overflow: hidden;
+    padding-bottom: 15px;
+}
+
+.yg-footer-text-right-bottom .yg-copy-right {
+    float: left;
+    line-height: 30px;
+    color: rgba(255, 255, 355, 0.5);
+    font-size: 12px;
+    padding-left: 4vw;
+}
+
+.yg-footer-text-right-bottom .yg-copy-icon {
+
+    float: right;
+    font-size: 24px
+}
+
+.yg-footer-text-right-bottom .yg-copy-icon .iconList a {
+    opacity: 0.4;
+}
+
+.yg-footer-text-right-bottom .yg-copy-icon .iconList a:hover {
+    opacity: 1;
+    transition: opacity .4s ease;
+    -webkit-transition: opacity .4s ease;
+}
+
+.yg-know-more .friendlyLink {
+    /*fix*/
+
+    align-items: center;
+    justify-items: center;
+    width: 34%;
+}
+
+.yg-know-more .contactUs {
+    /*fix*/
+
+    align-items: center;
+    width: 70%;
+    /*fix*/
+}
+
+.yg-know-more .contactUs-content {
+    margin: 0
+}
+
+.yg-know-more .yg-footer-text-right-bottom .yg-copy-right .yg-footer-left-tips img {
+    width: 18px;
+    display: inline-block;
+    vertical-align: sub;
+}
+
+.yg-know-more .yg-footer-text-right-bottom .yg-copy-right .yg-border {
+    border-left: 1px solid rgba(255, 255, 255, 0.5);
+    border-right: 1px solid rgba(255, 255, 255, 0.5);
+    padding: 0 10px;
+    margin: 0 10px;
+}
+
+.yg-know-more .yg-footer-text .yg-footer-text-left .yg-footer-logo {
+    color: #fff;
+    font-size: 8vw;
+    width: 8vw;
+    display: inline-block;
+}
+
+.yg-know-more .yg-footer-text .yg-footer-text-left .yg-footer-logo img {
+    width: 100%
+}
+
+.yg-know-more .connect-us-tips {
+    padding-left: 4vw;
+}
+
+.yg-know-more .wechat {
+    width: 120px;
+    height: 120px;
+    position: absolute;
+    right: 14vw;
+    bottom: 14.5%;
+    z-index: 24;
+    display: none;
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(153, 153, 153, 0.2);
+}
+
+.yg-know-more .wechat::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    margin-left: -6px;
+    bottom: -13px;
+    width: 0;
+    height: 0;
+    border-width: 8px 6px 6px;
+    border-style: solid;
+    border-color: #fff transparent transparent;
+}
+
+.yg-know-more .wechat img {
+    width: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+
+}
+
+.yg-footer-text-right-bottom .yg-copy-icon .iconList .wechatIcon {
+    cursor: pointer
+}
+
+
+
+.kindGarten .yg-know-more {
+    background: #fffef5
+}
+
+.kindGarten .yg-know-more .yg-learn-more-contain .yg-learn-more-tips {
+    line-height: 30px;
+    font-size: 20px;
+}
+
+.kindGarten .yg-know-more .yg-learn-more-contain .yg-learn-more-button span {
+    font-size: 24px;
+}
+
+.kindGarten .yg-know-more .yg-footer-gray {
+    font-size: 16px;
+}
+
+.kindGarten .yg-know-more .yg-footer-text-right-top .warm-link-title {
+    font-size: 16px;
+}
+
+.kindGarten .yg-know-more .yg-footer-text-right-top .connect-us-title {
+    font-size: 16px;
+}
+
+
+.kindGarten .yg-footer-text-right-bottom .yg-copy-right {
+    line-height: 30px;
+    font-size: 16px;
+}
+
+
+/* wm */
+@media screen and (max-width: 1024px) {
+
+    .yg-know-more .yg-learn-more-contain .yg-learn-more-button span {
+        padding: 3vw 21.2vw;
+    }
+
+    .yg-know-more .yg-footer-text .yg-footer-text-left {
+        display: none
+    }
+
+    .yg-know-more .yg-footer {
+        overflow: hidden;
+        height: 67vw;
+    }
+
+    .yg-know-more .yg-footer .yg-footer-cover {
+        display: none;
+    }
+
+    .yg-know-more .yg-footer .yg-footer-cover-mobile {
+        width: 100%;
+        display: block;
+    }
+
+    .yg-know-more .yg-footer-text {
+        width: 100vw;
+        padding-right: 0;
+        font-size: 0.12rem;
+        bottom: 0.2rem;
+    }
+
+    .yg-know-more .yg-footer-text .yg-footer-text-right {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .yg-know-more .yg-footer-text .yg-footer-text-right-top {
+        display: inline-block;
+        border: 0rem;
+        padding-bottom: 0;
+      text-align: center;
+    }
+
+    .yg-know-more .yg-footer-text .yg-footer-text-right-top p {
+        padding-left: 0;
+      display:inline-block;
+    }
+
+    .yg-know-more .friendlyLink {
+        display: inline-block;
+        width: 100vw;
+        border-left: unset;
+        padding-left: 0;
+    }
+
+    .yg-know-more .friendlyLink p {
+        display: inline-block;
+        margin-left: 0
+    }
+
+    .yg-know-more .friendlyLink p:nth-child(2) {
+        width: 80vw;
+        font-size: 0.12rem;
+    }
+
+    .yg-know-more .yg-footer-text-right-top .friendlyLink span {
+        display: inline-block;
+        line-height: unset;
+    }
+
+    .yg-know-more .contactUs {
+        align-items: unset;
+        width: 100%;
+        display: inline-block;
+        margin-top: 0.05rem;
+    }
+
+    .yg-know-more .yg-footer-text .yg-footer-text-right-top .lianxiwomen {
+        display: inline-block;
+        margin: 0 .1rem;
+    }
+
+    .yg-know-more .yg-footer-text .yg-footer-text-right-top .lianxiwomen a {
+        font-size: .10rem;
+        color: rgba(255, 255, 255, 0.5);
+        display: inline-block;
+        height: .08rem;
+        line-height: .08rem;
+        border-right: .01rem solid rgba(255, 255, 255, 0.5);
+        padding-right: .12rem;
+
+    }
+
+    .yg-know-more .yg-footer-text-right-top .connect-us-title {
+        font-size: .12rem;
+        border: 0rem;
+        color: rgba(255, 255, 255, 0.5);
+        padding-left: 0
+    }
+
+    .yg-know-more .yg-footer-text-right-top .warm-link-title {
+        font-size: .10rem;
+        padding: 0 .1rem 0 .2rem;
+        color: rgba(255, 255, 255, 0.5);
+        display: inline-block;
+        height: .08rem;
+        border-right: .01rem solid rgba(255, 255, 255, 0.5);
+        line-height: .08rem;
+        margin-bottom: 0;
+    }
+
+    .yg-know-more .yg-footer-icon {
+        display: none;
+    }
+
+    .yg-know-more .yg-footer-text-right-top .connect-us-detail {
+        margin-right: .1rem;
+        display: inline-block;
+        padding: 0
+    }
+
+    .yg-know-more .iconList {
+        color: rgba(255, 255, 255, 0.5);
+        margin: 0rem 0 0 .75rem;
+        display: block;
+        font-size: 0.2rem;
+        opacity: 0.4;
+    }
+
+    .yg-know-more .iconList span {
+        margin-right: .1rem;
+    }
+
+    .yg-know-more .contactUs .connectEmail {
+        /*display: block;*/
+        text-align: left;
+    }
+
+    .yg-footer-text-right-bottom .yg-copy-right {
+        float:unset;
+        line-height: .18rem;
+        font-size: 0.08rem;
+        text-align: center;
+        padding-left: unset;
+    } 
+
+    /* .yg-footer-text-right-bottom .yg-copy-right span {
+        display: inline-block;
+    } */
+
+    .yg-know-more .yg-footer-text-right-bottom .yg-copy-right .yg-border {
+        border-left: none;
+        border-right: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .yg-footer-text-right-bottom .yg-copy-icon {
+        float: left;
+        width: 100%
+    }
+
+    .yg-know-more .yg-footer-text-right-top .warm-link-detail {
+        padding-left: 0;
+        border-left: none;
+        border: none;
+    }
+
+    .yg-know-more .yg-footer-text-right-top .warm-link-detail a {
+        display: inline-block;
+        font-size: 0.10rem
+    }
+
+    .yg-know-more .yg-footer-text-right-top .warm-link-detail .rightBorder {
+
+        padding: 0 .05rem;
+        margin: 0 .05rem;
+    }
+
+    .yg-know-more .yg-learn-more-contain .yg-learn-more-tips {
+        font-size: .14rem;
+    }
+
+    .yg-footer-text-right-bottom {
+        padding-bottom: 0rem;
+    }
+
+    .yg-know-more .yg-footer-gray {
+        font-size: 0.10rem;
+    }
+
+    
+
+    .yg-know-more .wechat {
+        width: 1.2rem;
+        height: 1.2rem;
+        right: 2.3rem;
+        bottom: 1.1rem;
+    }
+
+    .kindGarten .yg-know-more {
+        background: #fffef5
+    }
+
+    .kindGarten .yg-know-more .yg-learn-more-contain .yg-learn-more-tips {
+        line-height: 0.18rem;
+        font-size: 0.12rem;
+    }
+
+    .kindGarten .yg-know-more .yg-footer-gray {
+        font-size: 0.10rem;
+    }
+
+    .kindGarten .yg-know-more .yg-footer-text-right-top .warm-link-title {
+        font-size: 0.10rem;
+    }
+
+    .kindGarten .yg-know-more .yg-footer-text-right-top .connect-us-title {
+        font-size: 0.10rem;
+    }
+
+
+    .kindGarten .yg-footer-text-right-bottom .yg-copy-right {
+        line-height: 0.18rem;
+        font-size: 0.10rem;
+    }
+
+    .kindGarten .yg-know-more .yg-footer-text {
+        bottom: 0.3rem
+    }
+
+}</style>
+
+    <script>
+      var OSLOGIN_HOST = "https://yunguid.yungu.org";
+    </script>
+  </head>
+
+  <body>
+    <!--[if lt IE 10]>
+    <script>
+        var href = window.location.href;
+        href.indexOf('prompt') < 0 && (window.location.href = '/prompt');
+        window.onerror = function() {
+          href.indexOf('prompt') < 0 && (window.location.href = '/prompt');
+          return;
+        }
+    </script>
+    <![endif]-->
+
+    <div id="loading">
+      <div class="loadBg"></div>  
+      <div class="loadIcon"></div>
+    </div>
+    <header>
+    <div class="ygMenu">
+        <div class="ygHeader">
+            <span class="topCover"></span>
+            <div class="ygLogo">
+                <a href="../../index.html">
+                    <i class="iconfont icon-logo">&#xe636;</i>
+                </a>
+            </div>
+            <ul class="header-menu menu-list">
+                
+                <li><a key="/about" href="../../about">关于云谷</a></li>
+                
+                <li><a key="/news" href="../../news">新闻</a></li>
+                
+                <li><a key="/kindergarten" href="../../kindergarten">幼儿园</a></li>
+                
+                <li><a key="/primary" href="../../primary">小学</a></li>
+                
+                <li><a key="/middle" href="../../middle">初中</a></li>
+                
+                <li><a key="/senior" href="../../senior">高中</a></li>
+                
+                <li><a key="/cooperation_exchange" href="../../cooperation_exchange">合作与交流</a></li>
+                
+                <li><a key="/recruit" href="../../recruit">应聘</a></li>
+                
+                <li><a key="/recruit_students" href="../../recruit_students">入学</a></li>
+                
+            </ul>
+            <ul class="header-menu header-right">
+                
+
+
+                <li class="userMsg">
+                    <span class="userImgBox">
+                        <span class="userImg"></span>
+                        <span class="userImgdefault"></span>
+                    </span>
+
+                    <span class="userName"></span>
+                    <span class="expend"><i class="iconfont icon-style iconInnerText">&#xe611;</i></span>
+                    <ul class="selectTips">
+                        <span class="arrows"></span>
+                        <li class="accountSet">账号设置</li>
+                        <li class="admissionApply">入学申请</li>
+                        <li class="application">应聘申请</li>
+                        <li class="exit">退出</li>
+                    </ul>
+                </li>
+
+
+                <li class="notUser">
+                    <a class="yg-login"><i class="iconfont icon-style">&#xe617;</i></a>
+                </li>
+
+                <li class="lang">
+                    <a id="changLanguageButton"><i class="iconfont icon-style iconInnerText">&#xe625;</i></a>
+                </li>
+            </ul>
+
+        </div>
+    </div>
+
+    <div class="mobile-news-menu" id='mobile-news-menu'>
+
+        <span class="list firstMenu"><i class="iconfont">&#xe61e;</i></span>
+        <span class="detailBack"><i class="iconfont">&#xe618;</i></span>
+        <div class="logo firstLogo"><a href="../../index.html"><i class="iconfont">&#xe636;</i></a></div>
+        <div class="detailTitle"><span></span></div>
+
+        <div class="userAndLang">
+            <span class="userMsg">
+                <span class="userImgBox">
+                    <span class="userImg"></span>
+                    <span class="userImgdefault"></span>
+                </span>
+
+                <ul class="selectTips">
+                    <li class="accountSet">账号设置</li>
+                    <li class="admissionApply">入学申请</li>
+                    <li class="application">应聘申请</li>
+                    <li class="exit">退出</li>
+                </ul>
+            </span>
+            <span class="person"><i class="iconfont">&#xe617;</i></span>
+            <span class="changeLangunge" id="changLanguageButtonMobile"><i
+                    class="iconfont iconInnerText">&#xe625;</i></span>
+        </div>
+        <ul class="sliderMenu">
+            
+            <li class="menuType">
+                <a key="/about" href="../../about" class="aLink">关于云谷</a>
+                <span class="rightIcon"><i class="iconfont">&#xe61a;</i></span>
+            </li>
+            
+            <li class="menuType">
+                <a key="/news" href="../../news" class="aLink">新闻</a>
+                <span class="rightIcon"><i class="iconfont">&#xe61a;</i></span>
+            </li>
+            
+            <li class="menuType">
+                <a key="/kindergarten" href="../../kindergarten" class="aLink">幼儿园</a>
+                <span class="rightIcon"><i class="iconfont">&#xe61a;</i></span>
+            </li>
+            
+            <li class="menuType">
+                <a key="/primary" href="../../primary" class="aLink">小学</a>
+                <span class="rightIcon"><i class="iconfont">&#xe61a;</i></span>
+            </li>
+            
+            <li class="menuType">
+                <a key="/middle" href="../../middle" class="aLink">初中</a>
+                <span class="rightIcon"><i class="iconfont">&#xe61a;</i></span>
+            </li>
+            
+            <li class="menuType">
+                <a key="/senior" href="../../senior" class="aLink">高中</a>
+                <span class="rightIcon"><i class="iconfont">&#xe61a;</i></span>
+            </li>
+            
+            <li class="menuType">
+                <a key="/cooperation_exchange" href="../../cooperation_exchange" class="aLink">合作与交流</a>
+                <span class="rightIcon"><i class="iconfont">&#xe61a;</i></span>
+            </li>
+            
+            <li class="menuType">
+                <a key="/recruit" href="../../recruit" class="aLink">应聘</a>
+                <span class="rightIcon"><i class="iconfont">&#xe61a;</i></span>
+            </li>
+            
+            <li class="menuType">
+                <a key="/recruit_students" href="../../recruit_students" class="aLink">入学</a>
+                <span class="rightIcon"><i class="iconfont">&#xe61a;</i></span>
+            </li>
+            
+        </ul>
+        <div class="opacity"></div>
+    </div>
+</header> 
+    
+
+    
+
+    <!-- 公共的js  -->
+    <script src="../../public/lib/js/jquery.3.1.1.min.js"></script>
+    <script src="../../public/lib/js/jquery.lazyload.min.js"></script>
+    <script src="../../public/js/mockData.js"></script>
+    <script src="../../public/lib/js/secondHeader.js"></script>
+
+    <!-- 将来页面要往这里填充具体的模板内容 -->
+     
+    <!-- 填充main部分的代码内容 -->
+    <!--此处模板template_id:62--><!-- 编写 HTML 代码 -->
+<!-- 编写 HTML 代码 -->
+<div class="imgList">
+  	 <div class="imgZhanwei"></div> 
+      <div class="imgListContent">
+       
+      </div> 
+  
+  <a></a>
+  
+</div>
+<script id="test_69b0_48d613" type="application/json">{"more":{"chineseText":"","chineseUrl":"","englishText":"","englishUrl":"","newWindowState":false,"text":"","url":""},"imageListZh":[{"uid":"rc-upload-1572416705684-162","name":"开放的教育生态1.png","status":"done","type":"image/png","size":5601235,"src":"https://yungu-public.oss-cn-hangzhou.aliyuncs.com/yungu-website/40492669735062500%E5%BC%80%E6%94%BE%E7%9A%84%E6%95%99%E8%82%B2%E7%94%9F%E6%80%811.png","sourceType":1,"url":"","uploadType":1},{"uid":"rc-upload-1572416705684-164","name":"开放的教育生态2.png","status":"done","type":"image/png","size":257670,"src":"https://yungu-public.oss-cn-hangzhou.aliyuncs.com/yungu-website/91698783675659300%E5%BC%80%E6%94%BE%E7%9A%84%E6%95%99%E8%82%B2%E7%94%9F%E6%80%812.png","sourceType":1,"url":"","uploadType":1},{"uid":"rc-upload-1572416705684-166","name":"开放的教育生态3.png","status":"done","type":"image/png","size":313489,"src":"https://yungu-public.oss-cn-hangzhou.aliyuncs.com/yungu-website/21814488982596190%E5%BC%80%E6%94%BE%E7%9A%84%E6%95%99%E8%82%B2%E7%94%9F%E6%80%813.png","sourceType":1,"url":"","uploadType":1}],"imageListEn":[{"uid":"rc-upload-1572416705684-169","name":"开放的教育生态英文1.png","status":"done","type":"image/png","size":5600247,"src":"https://yungu-public.oss-cn-hangzhou.aliyuncs.com/yungu-website/42915726259974950%E5%BC%80%E6%94%BE%E7%9A%84%E6%95%99%E8%82%B2%E7%94%9F%E6%80%81%E8%8B%B1%E6%96%871.png","sourceType":1,"url":"","uploadType":1},{"uid":"rc-upload-1572416705684-171","name":"开放的教育生态英文2.png","status":"done","type":"image/png","size":194305,"src":"https://yungu-public.oss-cn-hangzhou.aliyuncs.com/yungu-website/64289203671544024%E5%BC%80%E6%94%BE%E7%9A%84%E6%95%99%E8%82%B2%E7%94%9F%E6%80%81%E8%8B%B1%E6%96%872.png","sourceType":1,"url":"","uploadType":1},{"uid":"rc-upload-1572416705684-173","name":"开放的教育生态英文3.png","status":"done","type":"image/png","size":293731,"src":"https://yungu-public.oss-cn-hangzhou.aliyuncs.com/yungu-website/25814037995826510%E5%BC%80%E6%94%BE%E7%9A%84%E6%95%99%E8%82%B2%E7%94%9F%E6%80%81%E8%8B%B1%E6%96%873.png","sourceType":1,"url":"","uploadType":1}],"imageListZhMobile":[{"uid":"rc-upload-1572416705684-176","name":"开放的教育生态（小学） 1.png","status":"done","type":"image/png","size":2093885,"src":"https://yungu-public.oss-cn-hangzhou.aliyuncs.com/yungu-website/85456986670999780%E5%BC%80%E6%94%BE%E7%9A%84%E6%95%99%E8%82%B2%E7%94%9F%E6%80%81%EF%BC%88%E5%B0%8F%E5%AD%A6%EF%BC%89%201.png","sourceType":1,"url":"","uploadType":1},{"uid":"rc-upload-1572416705684-178","name":"开放的教育生态（小学） 2.png","status":"done","type":"image/png","size":222372,"src":"https://yungu-public.oss-cn-hangzhou.aliyuncs.com/yungu-website/24490783254047920%E5%BC%80%E6%94%BE%E7%9A%84%E6%95%99%E8%82%B2%E7%94%9F%E6%80%81%EF%BC%88%E5%B0%8F%E5%AD%A6%EF%BC%89%202.png","sourceType":1,"url":"","uploadType":1},{"uid":"rc-upload-1572416705684-180","name":"开放的教育生态（小学） 3.png","status":"done","type":"image/png","size":281940,"src":"https://yungu-public.oss-cn-hangzhou.aliyuncs.com/yungu-website/66450596017605220%E5%BC%80%E6%94%BE%E7%9A%84%E6%95%99%E8%82%B2%E7%94%9F%E6%80%81%EF%BC%88%E5%B0%8F%E5%AD%A6%EF%BC%89%203.png","sourceType":1,"url":"","uploadType":1}],"imageListEnMobile":[{"uid":"rc-upload-1572416705684-213","name":"开放的教育生态（小学）无线英文1.png","status":"done","type":"image/png","size":2092325,"src":"https://yungu-public.oss-cn-hangzhou.aliyuncs.com/yungu-website/60963124914553160%E5%BC%80%E6%94%BE%E7%9A%84%E6%95%99%E8%82%B2%E7%94%9F%E6%80%81%EF%BC%88%E5%B0%8F%E5%AD%A6%EF%BC%89%E6%97%A0%E7%BA%BF%E8%8B%B1%E6%96%871.png","sourceType":1,"url":"","uploadType":1},{"uid":"rc-upload-1572416705684-215","name":"开放的教育生态（小学）无线英文2.png","status":"done","type":"image/png","size":196136,"src":"https://yungu-public.oss-cn-hangzhou.aliyuncs.com/yungu-website/88449548304801300%E5%BC%80%E6%94%BE%E7%9A%84%E6%95%99%E8%82%B2%E7%94%9F%E6%80%81%EF%BC%88%E5%B0%8F%E5%AD%A6%EF%BC%89%E6%97%A0%E7%BA%BF%E8%8B%B1%E6%96%872.png","sourceType":1,"url":"","uploadType":1},{"uid":"rc-upload-1572416705684-217","name":"开放的教育生态（小学）无线英文3.png","status":"done","type":"image/png","size":183861,"src":"https://yungu-public.oss-cn-hangzhou.aliyuncs.com/yungu-website/55234888410470190%E5%BC%80%E6%94%BE%E7%9A%84%E6%95%99%E8%82%B2%E7%94%9F%E6%80%81%EF%BC%88%E5%B0%8F%E5%AD%A6%EF%BC%89%E6%97%A0%E7%BA%BF%E8%8B%B1%E6%96%873.png","sourceType":1,"url":"","uploadType":1},{"uid":"rc-upload-1572416705684-219","name":"开放的教育生态（小学）无线英文4.png","status":"done","type":"image/png","size":115061,"src":"https://yungu-public.oss-cn-hangzhou.aliyuncs.com/yungu-website/3335627494884718.5%E5%BC%80%E6%94%BE%E7%9A%84%E6%95%99%E8%82%B2%E7%94%9F%E6%80%81%EF%BC%88%E5%B0%8F%E5%AD%A6%EF%BC%89%E6%97%A0%E7%BA%BF%E8%8B%B1%E6%96%874.png","sourceType":1,"url":"","uploadType":1}],"txtImageVideo":[],"templateBuiltInParamsList":[{"type":"OBJECT","classification":1,"name":"more"},{"type":"ARRAY","classification":3,"name":"imageListZh"},{"type":"ARRAY","classification":3,"name":"imageListEn"},{"type":"ARRAY","classification":3,"name":"imageListZhMobile"},{"type":"ARRAY","classification":3,"name":"imageListEnMobile"},{"type":"ARRAY","classification":4,"name":"txtImageVideo"}]}</script>
+<!--此处模板template_id:32--> <div class="yg-know-more" data-component="b7f3_7308_36f9_4612">
+   
+<!--     <div class="yg-learn-more-contain">
+        <h3 class="yg-learn-more-title"></h3>
+      <p class="yg-learn-more-button">
+            <a style="background: " class="register" href="https://oslogin.daily.yungu-inc.org/api/os/cas/osLogin#/register"></a>
+        </p>
+        <p class="yg-learn-more-tips"></p>
+        
+    </div> -->
+    <div class="yg-footer">
+      
+        <img src="education" class="yg-footer-cover"/>
+      <img src="education" class="yg-footer-cover-mobile"/>
+                  <div class="wechat"><img src="https://yungu-xiaozhao.oss-cn-hangzhou.aliyuncs.com/yungu-website/85810832712537870IMG_0466.JPG" alt=""></div>
+
+        <div class="yg-footer-text">
+            <div class="yg-footer-text-left">
+<!--                 <img src=""/> -->
+<!--               <span class="yg-footer-logo"><i class="iconfont">&#xe630;</i></span> -->
+              
+              <span class="yg-footer-logo"><img src='https://yungu-xiaozhao.oss-cn-hangzhou.aliyuncs.com/yungu-website/19347237498293100logo-%E7%99%BD01.png' /></span>
+            </div>
+            <div class="yg-footer-text-right">
+                <div class="yg-footer-text-right-top">
+                  <div class="friendlyLink">
+                    <a class="warm-link-title yg-footer-white">友情链接</a>
+                    <p class="warm-link-detail yg-footer-gray">
+                        <a href="http://www.hzedu.gov.cn/sites/main/default.aspx " class="educationBureau">杭州市教育局</a>
+                        <a  href="http://www.hzpolice.gov.cn" class="rightBorder municipal">杭州市公安局</a>
+                      <a  href="http://hrss.hangzhou.gov.cn" class="social">杭州市人力资源和社会保障局</a>
+                    </p>
+                  </div>
+                  <div class="contactUs">
+                    <span class="connect-us-title yg-footer-white lianxiwomen"><a href='education'>联系我们</a></span>
+                    <p class="connect-us-tips">
+                    	
+                        <span class="connect-us-detail connect-us-detail-middle">
+                                <i class="iconfont yg-footer-icon yg-footer-white">&#xe613;</i>
+                                <i class="yg-footer-gray contactUs-content">0571-88376666</i>
+                        </span>
+                          <span class="connect-us-detail connectEmail">
+                              <i class="iconfont yg-footer-icon yg-footer-white">&#xe615;</i>
+                              <i class="yg-footer-gray contactUs-content">info@yungu.org</i>
+                          </span>
+                      <span class="connect-us-detail connectCoopration">
+<!--                           <i class="iconfont yg-footer-icon yg-footer-white">&#xe608;</i> -->
+                          <i class="iconfont yg-footer-icon yg-footer-white cooperation">品牌合作</i>
+                          <i class="yg-footer-gray contactUs-content">branding@yungu.org</i>
+                        </span>
+                    </p>
+                    
+                 </div>
+                </div>
+                <div class="yg-footer-text-right-bottom">
+<!--                     <p class="yg-copy-right"></p> -->
+                  <div class="yg-copy-icon">
+<!--                     <img src="http://yungu-xiaozhao.oss-cn-hangzhou.aliyuncs.com/yungu-website/79088764285555310footer-icon.png"/> -->
+                      <div class="iconList">
+                            <a class="wechatIcon"><i class="iconfont yg-footer-white">&#xe633;</i></a>
+                            <a href="https://weibo.com/u/6146926517"><i class="iconfont yg-footer-white">&#xe631;</i></a>
+                            <a href="https://www.linkedin.com/company/yungu/"><i class="iconfont yg-footer-white">&#xe632;</i></a>
+                      </div>
+                    </div>
+                  	<div class="yg-copy-right">
+                        <span class="yg-footer-left-tips">
+<!--                             <img src="https://yungu-xiaozhao.oss-cn-hangzhou.aliyuncs.com/yungu-website/51666009624875550%E8%AD%A6%E5%BE%BD.png" alt=""/> -->
+                            <span>浙公网安备 330100602009823号</span>
+                        </span>
+                        <span class="yg-footer-left-tips yg-border">浙ICP备17004649号</span>
+                        <span class="yg-footer-left-tips"> © 2016-现在yungu.org版权所有</span>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+    <!-- 统计代码 -->
+    <div style="display:none;">
+      <script
+        type="text/javascript"
+        src="https://s95.cnzz.com/z_stat.php?id=1261257612&web_id=1261257612"
+      ></script>
+      <script>
+        window.sendCZC = function(args) {
+          window._czc && args && window._czc.push(args);
+        };
+        var pageList = window.mockDate.pageList,
+          imageFooter = $(".yg-know-more .yg-footer .yg-footer-cover"),
+          imageFooterMobile = $(
+            ".yg-know-more .yg-footer .yg-footer-cover-mobile "
+          );
+
+        imageFooter.attr("src", pageList[0].footerImg);
+        imageFooterMobile.attr("src", pageList[0].footerImgMobile);
+
+        function changeHeaderColor() {
+          var pathName = window.location.pathname;
+          var headerColor = "rgba(2, 88, 191,0.85)";
+          if (pathName.indexOf("primary") != -1) {
+            headerColor = "rgba(63,176,199,0.85)";
+          } else if (pathName.indexOf("middle") != -1) {
+            headerColor = "rgba(65,146,222,0.85)";
+          } else if (pathName.indexOf("kindergarten") != -1) {
+            headerColor = "rgba(101,169,81, 0.85)";
+          }
+
+          $(".ygMenu").css("background", headerColor);
+        }
+        changeHeaderColor();
+        
+      </script>
+    </div>
+  </body>
+  
+    <!-- 填充script外链内容 -->
+    
+    <!-- 合并当前页面的js -->
+    <script>
+        window.onload = function(){
+            (function(){
+                
+
+$(function() {
+  var contentConfigure =  JSON.parse(document.getElementById("test_69b0_48d613").innerHTML);
+console.log(contentConfigure,'123')
+var imgList = contentConfigure.imageListZh,
+    divList = '';
+    if ($(window).width() <= 768 ) {
+      if (document.cookie && cookie('lang') == 'en') {
+      	imgList = contentConfigure.imageListEnMobile
+      }else{
+        imgList = contentConfigure.imageListZhMobile; 
+      }
+    }else{
+      if (document.cookie && cookie('lang') == 'en') {
+      	imgList = contentConfigure.imageListEn;
+      }else{
+        imgList = contentConfigure.imageListZh;
+      }
+    }
+   
+	for(var i=0 ; i<imgList.length ; i++){
+    	divList += '<div><img src=' + imgList[i].src + ' alt="" ></div>'
+      
+    }
+      $(".imgListContent ").html(divList)
+   
+    
+    
+    
+    
+  
+  
+});
+
+
+$(function(){
+	 $(".yg-footer-text-right-bottom .yg-copy-icon .iconList .wechatIcon ").on('mouseover',function(){
+    	$(".yg-know-more .wechat ").show()
+    })
+    $(".yg-footer-text-right-bottom .yg-copy-icon .iconList .wechatIcon ").on('mouseout',function(){
+    	$(".yg-know-more .wechat ").hide()
+    })
+  
+  if (document.cookie && document.cookie.indexOf("lang=en") >= 0 ) {
+    console.log('en')
+  	$(".yg-know-more .friendlyLink .yg-footer-white ").html('Links')
+    $(".yg-know-more .friendlyLink .educationBureau ").html('Hangzhou  Education Bureau')
+     $(".yg-know-more .friendlyLink .municipal ").html('Hangzhou Municipal Public Security Bureau')
+    $(".yg-know-more .friendlyLink .social ").html('Hangzhou Human Resources and Social Security Bureau')
+    $(".yg-know-more .contactUs .connect-us-title ").html('Contact us')
+    $(".yg-know-more .contactUs .cooperation ").html('Cooperation')
+  }else{
+  	$(".yg-know-more .friendlyLink .yg-footer-white ").html('友情链接')
+    $(".yg-know-more .friendlyLink .educationBureau ").html('杭州教育局')
+     $(".yg-know-more .friendlyLink .municipal ").html('杭州公安局')
+    $(".yg-know-more .friendlyLink .social ").html('杭州人力资源和社会保障局')
+    $(".yg-know-more .contactUs .connect-us-title ").html('联系我们')
+    $(".yg-know-more .contactUs .cooperation ").html('品牌合作')
+  }
+})
+            })();
+            
+        }
+                 $('loadBg').hide()
+                setTimeout( function(){
+                    $('loadIcon').hide()
+                    $('#loading').fadeOut()
+                },800)
+            
+    </script>
+
+</html>

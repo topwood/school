@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="format-detection" content="telephone=no" />
+    <!-- 页面公共 css -->
+    <link rel="stylesheet" type="text/css" href="../public/css/common.css" />
+    <link rel="stylesheet" type="text/css" href="../public/css/menu.css" />
+    <link rel="stylesheet" type="text/css" href="../public/css/blueHeader.css" />
+    <link rel="stylesheet" type="text/css" href="../public/lib/css/animate.css" />
+    <link rel="stylesheet" type="text/css" href="../public/css/robot.css" />
+    
+<title>申请应聘</title>
+<!-- 引入css外链 -->
+
+<!-- 合并当前页面的style -->
+<style type="text/css">
+    #job-iframe_5fe4_d4cf5d {
+  overflow: hidden;
+  width: 100%;
+  margin: 0 auto;
+  height: 1200px;
+}
+
+html, body, .yg-know-more {
+  background-color: #f5f5f5 !important;
+}
+.yungu-robot, .ygHeader .menu-list {
+  display: none;
+}
+
+</style>
+
+    <script>
+      var OSLOGIN_HOST = "https://yunguid.yungu.org";
+    </script>
+  </head>
+
+  <body>
+    <!--[if lt IE 10]>
+    <script>
+        var href = window.location.href;
+        href.indexOf('prompt') < 0 && (window.location.href = '/prompt');
+        window.onerror = function() {
+          href.indexOf('prompt') < 0 && (window.location.href = '/prompt');
+          return;
+        }
+    </script>
+    <![endif]-->
+
+    <div id="loading">
+      <div class="loadBg"></div>  
+      <div class="loadIcon"></div>
+    </div>
+    <header>
+    <div class="ygMenu">
+        <div class="ygHeader">
+            <span class="topCover"></span>
+            <div class="ygLogo">
+                <a href="../index.html">
+                    <i class="iconfont icon-logo">&#xe636;</i>
+                </a>
+            </div>
+            <ul class="header-menu menu-list">
+                
+                <li><a key="/about" href="../about">关于云谷</a></li>
+                
+                <li><a key="/news" href="../news">新闻</a></li>
+                
+                <li><a key="/kindergarten" href="../kindergarten">幼儿园</a></li>
+                
+                <li><a key="/primary" href="../primary">小学</a></li>
+                
+                <li><a key="/middle" href="../middle">初中</a></li>
+                
+                <li><a key="/senior" href="../senior">高中</a></li>
+                
+                <li><a key="/cooperation_exchange" href="../cooperation_exchange">合作与交流</a></li>
+                
+                <li><a key="/recruit" href="../recruit">应聘</a></li>
+                
+                <li><a key="/recruit_students" href="../recruit_students">入学</a></li>
+                
+            </ul>
+            <ul class="header-menu header-right">
+                
+
+
+                <li class="userMsg">
+                    <span class="userImgBox">
+                        <span class="userImg"></span>
+                        <span class="userImgdefault"></span>
+                    </span>
+
+                    <span class="userName"></span>
+                    <span class="expend"><i class="iconfont icon-style iconInnerText">&#xe611;</i></span>
+                    <ul class="selectTips">
+                        <span class="arrows"></span>
+                        <li class="accountSet">账号设置</li>
+                        <li class="admissionApply">入学申请</li>
+                        <li class="application">应聘申请</li>
+                        <li class="exit">退出</li>
+                    </ul>
+                </li>
+
+
+                <li class="notUser">
+                    <a class="yg-login"><i class="iconfont icon-style">&#xe617;</i></a>
+                </li>
+
+                <li class="lang">
+                    <a id="changLanguageButton"><i class="iconfont icon-style iconInnerText">&#xe625;</i></a>
+                </li>
+            </ul>
+
+        </div>
+    </div>
+
+    <div class="mobile-news-menu" id='mobile-news-menu'>
+
+        <span class="list firstMenu"><i class="iconfont">&#xe61e;</i></span>
+        <span class="detailBack"><i class="iconfont">&#xe618;</i></span>
+        <div class="logo firstLogo"><a href="../index.html"><i class="iconfont">&#xe636;</i></a></div>
+        <div class="detailTitle"><span></span></div>
+
+        <div class="userAndLang">
+            <span class="userMsg">
+                <span class="userImgBox">
+                    <span class="userImg"></span>
+                    <span class="userImgdefault"></span>
+                </span>
+
+                <ul class="selectTips">
+                    <li class="accountSet">账号设置</li>
+                    <li class="admissionApply">入学申请</li>
+                    <li class="application">应聘申请</li>
+                    <li class="exit">退出</li>
+                </ul>
+            </span>
+            <span class="person"><i class="iconfont">&#xe617;</i></span>
+            <span class="changeLangunge" id="changLanguageButtonMobile"><i
+                    class="iconfont iconInnerText">&#xe625;</i></span>
+        </div>
+        <ul class="sliderMenu">
+            
+            <li class="menuType">
+                <a key="/about" href="../about" class="aLink">关于云谷</a>
+                <span class="rightIcon"><i class="iconfont">&#xe61a;</i></span>
+            </li>
+            
+            <li class="menuType">
+                <a key="/news" href="../news" class="aLink">新闻</a>
+                <span class="rightIcon"><i class="iconfont">&#xe61a;</i></span>
+            </li>
+            
+            <li class="menuType">
+                <a key="/kindergarten" href="../kindergarten" class="aLink">幼儿园</a>
+                <span class="rightIcon"><i class="iconfont">&#xe61a;</i></span>
+            </li>
+            
+            <li class="menuType">
+                <a key="/primary" href="../primary" class="aLink">小学</a>
+                <span class="rightIcon"><i class="iconfont">&#xe61a;</i></span>
+            </li>
+            
+            <li class="menuType">
+                <a key="/middle" href="../middle" class="aLink">初中</a>
+                <span class="rightIcon"><i class="iconfont">&#xe61a;</i></span>
+            </li>
+            
+            <li class="menuType">
+                <a key="/senior" href="../senior" class="aLink">高中</a>
+                <span class="rightIcon"><i class="iconfont">&#xe61a;</i></span>
+            </li>
+            
+            <li class="menuType">
+                <a key="/cooperation_exchange" href="../cooperation_exchange" class="aLink">合作与交流</a>
+                <span class="rightIcon"><i class="iconfont">&#xe61a;</i></span>
+            </li>
+            
+            <li class="menuType">
+                <a key="/recruit" href="../recruit" class="aLink">应聘</a>
+                <span class="rightIcon"><i class="iconfont">&#xe61a;</i></span>
+            </li>
+            
+            <li class="menuType">
+                <a key="/recruit_students" href="../recruit_students" class="aLink">入学</a>
+                <span class="rightIcon"><i class="iconfont">&#xe61a;</i></span>
+            </li>
+            
+        </ul>
+        <div class="opacity"></div>
+    </div>
+</header> 
+    
+
+    
+
+    <!-- 公共的js  -->
+    <script src="../public/lib/js/jquery.3.1.1.min.js"></script>
+    <script src="../public/lib/js/jquery.lazyload.min.js"></script>
+    <script src="../public/js/mockData.js"></script>
+    <script src="../public/lib/js/secondHeader.js"></script>
+
+    <!-- 将来页面要往这里填充具体的模板内容 -->
+    
+<!-- 填充main部分的代码内容 -->
+<!--此处模板template_id:58--><div id="job-iframe_5fe4_d4cf5d">
+<iframe
+       
+src='https://www.hotjob.cn/wt/yungu/web/index/social?brandCode=1&request_locale=zh_CN&ticket=&cssLink=https%3A%2F%2Fcareer.yungu.org%2Fpublic%2Fcss%2Fhotjob.css'
+       
+        width='100%' height='100%' frameborder='0' class='myframe'></iframe>
+<script>
+    (function() {
+        window.addEventListener('message', function(event) {
+            if (event.origin !== 'https://www.yungu.org') {
+                return;
+            }
+            var ph = parseInt(event.data, 10);
+				    if (!isNaN(ph)) {
+				        var p = document.getElementsByClassName('myframe');
+				        p && (p[0].height = ph + 'px');
+            }
+        }, false);
+      var isPC = 'false';
+      if ( isPC === 'false') {
+    window.location.href = 'https://www.hotjob.cn/wt/yungu/web/index';
+  }
+    })();
+</script>
+</div>
+
+
+    <!-- 统计代码 -->
+    <div style="display:none;">
+      <script
+        type="text/javascript"
+        src="https://s95.cnzz.com/z_stat.php?id=1261257612&web_id=1261257612"
+      ></script>
+      <script>
+        window.sendCZC = function(args) {
+          window._czc && args && window._czc.push(args);
+        };
+        var pageList = window.mockDate.pageList,
+          imageFooter = $(".yg-know-more .yg-footer .yg-footer-cover"),
+          imageFooterMobile = $(
+            ".yg-know-more .yg-footer .yg-footer-cover-mobile "
+          );
+
+        imageFooter.attr("src", pageList[0].footerImg);
+        imageFooterMobile.attr("src", pageList[0].footerImgMobile);
+
+        function changeHeaderColor() {
+          var pathName = window.location.pathname;
+          var headerColor = "rgba(2, 88, 191,0.85)";
+          if (pathName.indexOf("primary") != -1) {
+            headerColor = "rgba(63,176,199,0.85)";
+          } else if (pathName.indexOf("middle") != -1) {
+            headerColor = "rgba(65,146,222,0.85)";
+          } else if (pathName.indexOf("kindergarten") != -1) {
+            headerColor = "rgba(101,169,81, 0.85)";
+          }
+
+          $(".ygMenu").css("background", headerColor);
+        }
+        changeHeaderColor();
+        
+      </script>
+    </div>
+  </body>
+  
+<!-- 填充script外链内容 -->
+
+<!-- 合并当前页面的js -->
+
+<script>
+    window.onload = function () {
+        (function () {
+            
+        })();
+    }
+            $('loadBg').fadeOut()
+            setTimeout( function(){
+                $('loadIcon').hide()
+                $('#loading').fadeOut()
+            },800)
+</script>
+
+</html>

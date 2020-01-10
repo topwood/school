@@ -1,0 +1,53 @@
+/*云谷机器人样式*/
+.yungu-robot {
+    position: fixed;
+    bottom: 9%;
+    z-index: 999;
+    right: 10px;
+}
+.yungu-robot .robotIcon {
+    font-size: 40px;
+    position: absolute;
+    right: 0;
+    cursor: pointer;
+    color: rgb(2, 88, 191);
+    text-shadow: 12px 5px 60px rgba(255,255,255,0.8);
+    border-radius: 20px;
+        
+}
+.yungu-robot .robot{
+    width: 48px;
+    height: 48px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.10);
+    -moz-box-shadow: 0 10px 20px rgb(0, 0, 0, 0.1);
+    -webkit-box-shadow: 0 10px 20px rgb(0, 0, 0, 0.1);
+    position: absolute;
+    right: 3vw;
+    cursor:pointer;
+}
+
+.yungu-robot .robot img{
+    width: 100%;
+    display: block
+}
+
+.yungu-robot .yungu-robot-window {
+    position: relative;
+    right: 3vw;
+    height: 60vh;
+    min-height: 500px;
+    border: none;
+    -moz-box-shadow: 0 4px 20px rgb(0, 0, 0, 0.1);
+    -webkit-box-shadow: 0 4px 20px rgb(0, 0, 0, 0.1);
+    box-shadow: 0 4px 20px rgb(0, 0, 0, 0.1);
+    display: none;
+    margin-right: 48px;
+}
+
+@media screen and (max-width: 1024px) {
+    .yungu-robot .robot{
+        width: 0.42rem;
+        height: 0.42rem;
+    }
+}
+

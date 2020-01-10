@@ -1,0 +1,411 @@
+/*menu样式*/
+.mobile-news-menu {
+    display: none;
+}
+
+.ygMenu {
+    /*background: linear-gradient(to bottom,rgba(29,19,19,0.2),rgba(60, 55, 55,0.02));*/
+
+    position: absolute;
+    z-index: 50;
+    width: 100%;
+    top: 0;
+}
+
+.ygMenu .ygHeader {
+    margin: 0 auto;
+    /* max-width: 76%; */
+    padding-left: 1.2vw;
+    padding-right: 1.2vw;
+    width: 100%;
+    text-align: center;
+}
+
+.kindGarten .ygMenu .ygHeader {
+    font-family: "kinderFont";
+    /* max-width: 80%; */
+}
+
+.ygMenu .ygHeader:after {
+    display: block;
+    clear: both;
+    content: '';
+    visibility: hidden;
+
+}
+
+.ygMenu .ygHeader .ygLogo {
+    /* float: left; */
+    /* margin-top: 5px; */
+    text-align: right;
+    display: inline-block;
+    vertical-align: middle;
+    line-height: 54px;
+}
+
+.ygMenu .ygHeader .ygLogo img {
+    width: 100%;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.ygMenu .ygHeader .ygLogo>a {
+    width: 24px;
+    display: inline-block;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.ygMenu .ygHeader .ygLogo .icon-logo {
+    font-size: 24px;
+    color: #fff;
+}
+
+.ygHeader .ygLogo>a>img {
+    transition: margin-top 0.5s;
+    -webkit-transition: margin-top 0.5s;
+    -moz-transition: margin-top 0.5s;
+}
+
+.ygMenu .header-menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.ygMenu .header-menu:after {
+    display: block;
+    content: "";
+    clear: both;
+    visibility: hidden;
+}
+
+.ygMenu .header-menu>li {
+    list-style: none;
+    /* flex: 1;
+    -webkit-flex: 1;
+    -moz-flex: 1; */
+    display: inline-block;
+    text-align: center;
+    margin: 0 1.5vw;
+}
+
+.ygMenu .header-menu>li>a {
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 16px;
+    cursor: pointer;
+    transition: color 0.4s ease 0.1s;
+}
+
+.ygHeader .header-right {
+    display: inline-block;
+    line-height: 54px;
+    vertical-align: middle;
+}
+
+.ygHeader .header-right>li {
+    margin-left: 5px;
+    margin-right: 5px;
+    display: inline-block;
+}
+
+.ygHeader .header-right .notUser {
+    display: none;
+}
+
+.ygHeader .header-right .userMsg {
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.7);
+    line-height: 50px;
+    cursor: pointer;
+    position: relative;
+    margin-top: 0;
+    display: none;
+}
+
+
+.ygHeader .header-right .userMsg .userImgBox .userImgdefault {
+    vertical-align: middle;
+}
+
+.ygHeader .header-right .userMsg span {
+    display: inline-block;
+
+}
+
+.ygHeader .header-right .userMsg .userImg {
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    background: #0258bf;
+    display: inline-block;
+    margin-right: 5px;
+    vertical-align: sub;
+}
+
+.ygHeader .header-right .userMsg .expend {
+    margin-right: 5px;
+}
+
+.ygHeader .header-right .userMsg .expend i {
+    font-size: 12px;
+}
+
+.ygHeader .header-right .userMsg .selectTips {
+    position: absolute;
+    width: 12vw;
+    top: 3.5vw;
+    right: 0;
+    z-index: 30;
+    line-height: 40px;
+    list-style-type: none;
+    background: #fff;
+    border-radius: 4px;
+    color: #999;
+    display: none;
+    font-size: 14px;
+
+}
+
+.ygHeader .header-right .userMsg .selectTips li {
+    width: 100%;
+    padding-left: 1vw;
+}
+
+.ygHeader .header-right .userMsg .selectTips .arrows {
+    display: inline-block;
+    border-width: 0 0.4vw 0.5vw 0.4vw;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    position: absolute;
+    top: -6px;
+    right: 1vw;
+    border-color: transparent transparent #fff transparent;
+
+}
+
+.ygHeader .header-right .userMsg .selectTips .accountSet:hover {
+    box-shadow: 0 10px 30px rgba(153, 153, 153, 0.1);
+
+}
+
+.ygHeader .header-right .userMsg .selectTips .exit:hover {
+    box-shadow: 0 -10px 30px rgba(153, 153, 153, 0.1);
+}
+
+.ygHeader .header-right .userMsg .selectTips .application:hover {
+    box-shadow: 0 -10px 30px rgba(153, 153, 153, 0.1);
+}
+.ygHeader .header-right .userMsg .selectTips .admissionApply:hover {
+    box-shadow: 0 -10px 30px rgba(153, 153, 153, 0.1);
+}
+
+.ygHeader .icon-style {
+    font-size: 22px;
+}
+
+.ygHeader .menu-list {
+    text-align: center;
+    display: inline-block;
+    line-height: 54px;
+}
+
+.ygHeader .menu-list>li {
+    /* flex: 1;
+    -webkit-flex: 1;
+    -moz-flex: 1;
+    text-align: center;
+    margin-top: 12px; */
+}
+
+.ygHeader .topCover {
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 20vw;
+    display: block;
+    background-image: linear-gradient(to bottom, rgba(2, 88, 191, 0.3), rgba(2, 88, 191, 0));
+}
+
+.seniorCommon .ygHeader .topCover {
+    background-image: linear-gradient(to bottom, rgba(2, 88, 191, 0.3), rgba(36, 88, 236, 0))
+}
+
+.primaryCommon .ygHeader .topCover {
+    background-image: linear-gradient(to bottom, rgba(63, 176, 199, 0.3), rgba(63, 176, 199, 0));
+}
+
+.middleCommon .ygHeader .topCover {
+    background-image: linear-gradient(to bottom, rgba(65, 146, 222, 0.3), rgba(65, 146, 222, 0));
+}
+
+.kindGarten .ygHeader .topCover {
+    background-image: linear-gradient(to bottom, rgba(101, 169, 81, 0.3), rgba(101, 169, 81, 0));
+}
+
+.kindGarten .ygMenu .header-menu>li>a,
+.kindGarten .first-menu .first-menu-left>li>a {
+    font-size: 20px
+}
+
+
+
+@media screen and (max-width: 1024px) {
+    .ygMenu {
+        display: none
+    }
+
+    #mobile-news-menu a {
+        text-decoration: none;
+        color: #fff;
+        font-size: 20px;
+    }
+
+    #mobile-news-menu {
+        display: flex;
+        justify-content: space-between;
+        font-size: 20px;
+        line-height: 44px;
+        background: #0258bf;
+        color: #fff;
+        padding: 0 20px;
+        position: absolute;
+        top: 0;
+        z-index: 30;
+        width: 100%;
+        position: relative
+    }
+
+    .seniorCommon #mobile-news-menu {
+        background: rgba(36, 88, 236, 0.85)
+    }
+
+    .primaryCommon #mobile-news-menu {
+        background: rgba(63, 176, 199, 0.85)
+    }
+
+    .middleCommon #mobile-news-menu {
+        background: rgba(65, 146, 222, 0.85)
+    }
+
+    .kindGarten #mobile-news-menu {
+        background: rgba(101, 169, 81, 0.85)
+    }
+
+    #mobile-news-menu .person {
+        margin-right: 5px;
+    }
+
+    #mobile-news-menu .logo {
+        margin-left: 20px;
+    }
+
+    #mobile-news-menu .sliderMenu {
+        list-style-type: none;
+        background: #fff;
+        color: #333;
+        position: absolute;
+        top: 0;
+        left: -75%;
+        z-index: 22;
+        width: 75%;
+        height: 100vh;
+        /* display: none; */
+        transition: left .4s cubic-bezier(.4, 0, 0, 1);
+        padding: 40px 15px;
+        line-height: 0.49rem;
+    }
+
+    #mobile-news-menu .menuType {
+        position: relative;
+    }
+
+    #mobile-news-menu .opacity {
+        width: 100%;
+        height: 100vh;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: rgba(255, 255, 255, 0);
+        z-index: 21;
+        display: none;
+    }
+
+    #mobile-news-menu .aLink {
+        display: block;
+        width: 100%;
+        text-decoration: none;
+        color: #999;
+        font-size: 16px;
+        border-bottom: 1px solid #eaeaea;
+        cursor: pointer;
+    }
+
+    #mobile-news-menu .rightIcon {
+        position: absolute;
+        right: 0px;
+        z-index: 10;
+        font-size: 16px;
+        color: #ccc;
+        top: 0;
+    }
+
+    #mobile-news-menu .userMsg .expend {
+        margin-right: 10px;
+    }
+
+    #mobile-news-menu .userMsg .expend i {
+        font-size: 12px;
+    }
+
+    #mobile-news-menu .userMsg {
+        display: none;
+    }
+
+    #mobile-news-menu .userMsg .userImg {
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        vertical-align: middle;
+        margin-top: -3px;
+        line-height: 20px;
+    }
+
+    .kindGarten #mobile-news-menu .userMsg .userImg {
+        margin-top: -8px
+    }
+
+    #mobile-news-menu .userMsg .selectTips {
+        display: none;
+        position: absolute;
+        width: 100vw;
+        top: 44px;
+        z-index: 30;
+        line-height: 54px;
+        list-style-type: none;
+        background: #fff;
+        color: #999;
+        font-size: 14px;
+        padding: 0 4vw;
+        right: 0;
+        max-height: 600px;
+        overflow: hidden;
+        transition: max-height .5s cubic-bezier(.4, 0, 0, 1);
+        box-shadow: 0 10px 30px rgba(153, 153, 153, 0.1)
+    }
+
+    #mobile-news-menu .userMsg .selectTips li {
+        width: 100%;
+        border-bottom: 1px solid #eaeaea;
+    }
+
+    #mobileMenu .userMsg .selectTips li:last-child {
+        border: none !important;
+    }
+
+}

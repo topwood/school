@@ -1,0 +1,115 @@
+/*menu样式*/
+
+.mobile-news-menu{
+    display: none;
+}
+.ygMenu {
+    background: #0258bf;
+    position: relative;
+    width: 100%;
+    margin-bottom: 0;
+}
+.ygMenu .ygHeader{
+    margin: 0 auto;
+    /* max-width: 76%; */
+    padding-left: 1.2vw;
+    padding-right: 1.2vw;
+    width: 100%;
+}
+
+.ygMenu .ygHeader:after {
+    display: block;
+    clear: both;
+    content: '';
+    visibility: hidden;
+
+}
+
+.ygMenu .ygHeader .ygLogo {
+    /* float: left; */
+}
+
+.ygHeader .header-right {
+    /* float: right; */
+}
+
+
+
+.ygHeader .topCover{
+    height: 0;
+}
+
+@media screen and (max-width: 1024px) {
+    .ygMenu{
+        display: none
+    }
+    a{
+        text-decoration: none;
+        color: #fff;
+        font-size: 20px;
+    }
+    #mobile-news-menu{
+        display: flex;
+        justify-content: space-between;
+        font-size: 20px;
+        line-height: 44px;
+        background: #0258bf;
+        color: #fff;
+        padding:0 20px;
+        position: absolute;
+        top: 0;
+        z-index: 30;
+        width: 100%;
+    }
+
+    #mobile-news-menu .person{
+        margin-right: 5px;
+    }
+    #mobile-news-menu .logo{
+        margin-left: 20px;
+    }
+    #mobile-news-menu .sliderMenu{
+        list-style-type: none;
+        background: #fff;
+        color: #333;
+        position: absolute;
+        top: 0;
+        left: -75%;
+        z-index: 22;
+        width: 75%;
+        height: 100vh;
+        /* display: none; */
+        transition: left .4s cubic-bezier(.4,0,0,1);
+        padding:40px 15px;
+    }
+    #mobile-news-menu .menuType{
+        position: relative;
+    }
+    #mobile-news-menu .opacity{
+        width: 100%;
+        height: 100vh;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: rgba(255, 255, 255, 0);
+        z-index: 21;
+        display: none;
+    }
+    #mobile-news-menu .aLink{
+        display: block;
+        width: 100%;
+        text-decoration: none;
+        color: #999;
+        font-size: 16px;
+        border-bottom: 1px solid #eaeaea;
+        cursor: pointer;
+    }
+    #mobile-news-menu .rightIcon{
+        position: absolute;
+        right: 0px;
+        z-index: 10;
+        font-size: 16px;
+        color: #ccc;
+        top: 0;
+    }
+}

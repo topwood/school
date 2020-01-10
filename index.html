@@ -1,0 +1,774 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="format-detection" content="telephone=no" />
+    <!-- 页面公共 css -->
+    <link rel="stylesheet" type="text/css" href="public/css/common.css" />
+    <link rel="stylesheet" type="text/css" href="public/css/menu.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="public/css/secondHeader.css"
+    />
+    <link rel="stylesheet" type="text/css" href="public/lib/css/animate.css" />
+    <link rel="stylesheet" type="text/css" href="public/css/robot.css" />
+    
+    <title>云谷主页</title>
+    <!-- 引入css外链 -->
+    <link rel="stylesheet" type="text/css" href= "public/lib/css/slick.css" /><link rel="stylesheet" type="text/css" href= "public/lib/css/fullpage.min.css" />
+    <!-- 合并当前页面的style -->
+    <style type="text/css">body{
+    height: 100vh !important;
+    overflow: hidden;
+}
+.menu-wrapper{
+	display:none
+}
+
+.yg-banner {
+    position: relative;
+    z-index: 10;
+    width: 100vw;
+    height: 100vh !important;
+    overflow: hidden;
+}
+.yg-banner .cover{
+	width:100%;
+    height:100vh;
+  position:absolute;
+  z-index:12;
+  top:0;
+  background:rgba(0,0,0,0.2)
+}
+.yg-banner .banner-text {
+    position: relative;
+    z-index: 12;
+    width: 45vw;
+    
+    margin-top: 25vh;
+}
+.yg-banner .banner-text .row{
+   max-width: 90vw;
+   width: 100%;
+   margin: 10rem auto 10rem;
+}
+.yg-banner .banner-text .cols {
+    margin-left: 30%;
+}
+.yg-banner .banner-text .banner-title {
+    font-size: 38px;
+    color: #fff;
+    font-weight:400;
+    position: relative;
+    bottom: 8vh;
+    opacity: 0;
+  	margin-bottom:8px;
+  	font-family: PingFangSC-Semibold, sans-serif;
+     
+}
+.yg-banner .banner-text .banner-description {
+    width: 100%;
+    color: #fff;
+    line-height: 26px;
+    margin:0 0 32px;
+    font-size: 16px;
+    text-shadow: 4px 5px 60px rgba(0,0,0,0.5);
+    position: relative;
+    bottom: 7vh;
+  	opacity: 0;
+     
+}
+.yg-banner .banner-text .common-button {
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 20px;
+    position: relative;
+    bottom: 0;
+    line-height:38px;
+    display:inline-block;
+    opacity: 0;
+  transition: background .4s ease;
+    -webkit-transition: background .4s ease;
+    width: 120px;
+    text-align: center;
+}
+
+.yg-banner .banner-text .blue-button {
+    background: #0258bf;
+    color: #fff;
+}
+.yg-banner .banner-text .blue-button:hover{
+	background:#0577ff;
+    
+}
+.yg-banner .banner-text .white-button {
+    background: #fff;
+    color: #0258bf;
+}
+.yg-banner .banner-text .common-button:hover{
+	background:#0258bf;
+    color:#fff;
+}
+
+/*轮播图*/
+.yg-banner .banner-img {
+    position: absolute;
+    z-index: 11;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+.yg-banner .banner-img .resize-img {
+    width: 100vw;
+    height: 100vh;
+}
+.yg-banner .banner-img .back-video {
+    width: 100vw;
+    height: 100vh;
+    object-fit: fill;
+    -o-object-fit: fill;
+}
+/*播放暂停按钮*/
+.yg-banner .banner-img .control-button {
+    position: absolute;
+    top: 50%;
+    z-index: 20;
+    color: #fff;
+    left: 50%;
+    font-size: 3.5vw;
+    display: none;
+    cursor: pointer;
+
+}
+/*底部背景*/
+.back-cover {
+    position: absolute;
+    bottom: 0;
+    width: 100vw;
+    z-index: 14;
+    background: linear-gradient(to top, #024ebf, rgba(2,78,191,0.02));
+}
+.back-cover .cover-img {
+  width: 100vw;
+  display:block;
+}
+.back-cover .cover-img-mobile{
+	display:none
+}
+
+ .yg-index-footer{
+    position: absolute;
+    z-index: 20;
+    bottom: 10px;
+    margin: 0 auto;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 12px;
+    color: rgba(255,255,255,0.5);
+}
+
+@media screen and (max-width: 1024px) {
+	.yg-banner .banner-text {
+    position: relative;
+    z-index: 12;
+    width: 100%;
+    margin-top: 25vh;
+}
+.yg-banner .banner-text .row{
+	margin:0 0 0 0.3rem;
+}
+.yg-banner .banner-text .cols {
+    margin-right: 9%;
+    margin-left: 0;
+}
+
+.yg-banner .banner-text .banner-title {
+    font-size: .24rem;
+}
+
+.yg-banner .banner-text .common-button {
+   
+    bottom: 0px;
+    display: block;
+    width: 1.3rem;
+  line-height:0.38rem;
+  text-align:center
+}
+
+.yg-banner .banner-text .banner-description {
+    margin: .1rem 0 .3rem;
+  font-size:0.14rem
+}
+
+.yg-banner .banner-img .back-video {
+    width: auto;
+}
+
+.banner-wrapper-text .banner-wrapper-description {
+    margin: .1rem 0 .4rem;
+  	
+}
+.back-cover{
+	/*height:1.7rem;*/
+  position: absolute;
+  position: sticky;
+  position: -webkit-sticky;
+}
+.back-cover .cover-img {
+    display: none;
+}
+
+.back-cover .cover-img-mobile {
+    display: block;
+    width: 100%;
+}
+.yg-index-footer{
+  	display:none
+  }
+  .slick-dots li button:hover:before, .slick-dots li button:before{
+  	font-size:0.2rem
+  }
+  .slick-dots li.slick-active button:before{
+  	font-size:0.2rem
+  }
+ .slick-dots{
+    bottom:1.3rem;
+   
+  	/*position: sticky;
+   
+    overflow: hidden;
+    display:flex;
+    display: -webkit-flex;
+    justify-content: center;*/
+  }
+   /*.slick-dots li{
+  	display:block;                
+  }*/
+}
+</style>
+
+    <script>
+      var OSLOGIN_HOST = "https://yunguid.yungu.org";
+    </script>
+  </head>
+
+  <body>
+
+  <div id="loading">
+    <div class="loadBg"></div>  
+    <div class="loadIcon"></div>
+  </div>
+    
+    <!--[if lt IE 10]>
+    <script>
+        var href = window.location.href;
+        href.indexOf('prompt') < 0 && (window.location.href = '/prompt');
+        window.onerror = function() {
+          href.indexOf('prompt') < 0 && (window.location.href = '/prompt');
+          return;
+        }
+    </script>
+    <![endif]-->
+    <header>
+    <div class="ygMenu">
+        <div class="ygHeader">
+            <span class="topCover"></span>
+            <div class="ygLogo">
+                <a href="index.html">
+                    <i class="iconfont icon-logo">&#xe636;</i>
+                </a>
+            </div>
+            <ul class="header-menu menu-list">
+                
+                <li><a key="/about" href="about">关于云谷</a></li>
+                
+                <li><a key="/kindergarten" href="kindergarten">幼儿园</a></li>
+                
+                <li><a key="/primary" href="primary">小学</a></li>
+                
+                <li><a key="/middle" href="middle">初中</a></li>
+                
+                <li><a key="/senior" href="senior">高中</a></li>
+                
+                <li><a key="/cooperation_exchange" href="cooperation_exchange">合作与交流</a></li>
+                
+                <li><a key="/recruit" href="recruit">应聘</a></li>
+                
+                <li><a key="/recruit_students" href="recruit_students">入学</a></li>
+                
+            </ul>
+            <ul class="header-menu header-right">
+                
+
+
+                <li class="userMsg">
+                    <span class="userImgBox">
+                        <span class="userImg"></span>
+                        <span class="userImgdefault"></span>
+                    </span>
+
+                    <span class="userName"></span>
+                    <span class="expend"><i class="iconfont icon-style iconInnerText">&#xe611;</i></span>
+                    <ul class="selectTips">
+                        <span class="arrows"></span>
+                        <li class="accountSet">账号设置</li>
+                        <li class="admissionApply">入学申请</li>
+                        <li class="application">应聘申请</li>
+                        <li class="exit">退出</li>
+                    </ul>
+                </li>
+
+
+                <li class="notUser">
+                    <a class="yg-login"><i class="iconfont icon-style">&#xe617;</i></a>
+                </li>
+
+                <li class="lang">
+                    <a id="changLanguageButton"><i class="iconfont icon-style iconInnerText">&#xe625;</i></a>
+                </li>
+            </ul>
+
+        </div>
+    </div>
+
+    <div class="mobile-news-menu" id='mobile-news-menu'>
+
+        <span class="list firstMenu"><i class="iconfont">&#xe61e;</i></span>
+        <span class="detailBack"><i class="iconfont">&#xe618;</i></span>
+        <div class="logo firstLogo"><a href="index.html"><i class="iconfont">&#xe636;</i></a></div>
+        <div class="detailTitle"><span></span></div>
+
+        <div class="userAndLang">
+            <span class="userMsg">
+                <span class="userImgBox">
+                    <span class="userImg"></span>
+                    <span class="userImgdefault"></span>
+                </span>
+
+                <ul class="selectTips">
+                    <li class="accountSet">账号设置</li>
+                    <li class="admissionApply">入学申请</li>
+                    <li class="application">应聘申请</li>
+                    <li class="exit">退出</li>
+                </ul>
+            </span>
+            <span class="person"><i class="iconfont">&#xe617;</i></span>
+            <span class="changeLangunge" id="changLanguageButtonMobile"><i
+                    class="iconfont iconInnerText">&#xe625;</i></span>
+        </div>
+        <ul class="sliderMenu">
+            
+            <li class="menuType">
+                <a key="/about" href="about" class="aLink">关于云谷</a>
+                <span class="rightIcon"><i class="iconfont">&#xe61a;</i></span>
+            </li>
+            
+            <li class="menuType">
+                <a key="/kindergarten" href="kindergarten" class="aLink">幼儿园</a>
+                <span class="rightIcon"><i class="iconfont">&#xe61a;</i></span>
+            </li>
+            
+            <li class="menuType">
+                <a key="/primary" href="primary" class="aLink">小学</a>
+                <span class="rightIcon"><i class="iconfont">&#xe61a;</i></span>
+            </li>
+            
+            <li class="menuType">
+                <a key="/middle" href="middle" class="aLink">初中</a>
+                <span class="rightIcon"><i class="iconfont">&#xe61a;</i></span>
+            </li>
+            
+            <li class="menuType">
+                <a key="/senior" href="senior" class="aLink">高中</a>
+                <span class="rightIcon"><i class="iconfont">&#xe61a;</i></span>
+            </li>
+            
+            <li class="menuType">
+                <a key="/cooperation_exchange" href="cooperation_exchange" class="aLink">合作与交流</a>
+                <span class="rightIcon"><i class="iconfont">&#xe61a;</i></span>
+            </li>
+            
+            <li class="menuType">
+                <a key="/recruit" href="recruit" class="aLink">应聘</a>
+                <span class="rightIcon"><i class="iconfont">&#xe61a;</i></span>
+            </li>
+            
+            <li class="menuType">
+                <a key="/recruit_students" href="recruit_students" class="aLink">入学</a>
+                <span class="rightIcon"><i class="iconfont">&#xe61a;</i></span>
+            </li>
+            
+        </ul>
+        <div class="opacity"></div>
+    </div>
+</header>  <!--二级菜单-->
+ <div id="pcMenu">
+     <div class="menu-wrapper">
+         <div class="menu-list-wrapper">
+             <div class="nav-wrapper">
+                 <div class="first-menu">
+                     
+                     <ul class="first-menu-right menu-style">
+                         <li></li>
+                         <li></li>
+                     </ul>
+                     <ul class="first-menu-left menu-style">
+                         
+                         <li data-url="/about">
+                             <a href="about">关于云谷</a>
+                             
+                         </li>
+                         
+                         <li data-url="/kindergarten">
+                             <a href="kindergarten">幼儿园</a>
+                             
+                         </li>
+                         
+                         <li data-url="/primary">
+                             <a href="primary">小学</a>
+                             
+                         </li>
+                         
+                         <li data-url="/middle">
+                             <a href="middle">初中</a>
+                             
+                         </li>
+                         
+                         <li data-url="/senior">
+                             <a href="senior">高中</a>
+                             
+                         </li>
+                         
+                         <li data-url="/cooperation_exchange">
+                             <a href="cooperation_exchange">合作与交流</a>
+                             
+                         </li>
+                         
+                         <li data-url="/recruit">
+                             <a href="recruit">应聘</a>
+                             
+                         </li>
+                         
+                         <li data-url="/recruit_students">
+                             <a href="recruit_students">入学</a>
+                             
+                         </li>
+                         
+                     </ul>
+                 </div>
+             </div>
+             <div class="nav-detail-wrapper">
+                 <div class="second-menu">
+                    <div class="menu-wrapper-logo">
+                         <a class="logo-a" href="index.html">
+                             <i class="iconfont icon-logo">&#xe636;</i>
+                             
+
+                         </a>
+                    </div>
+                     <ul class="second-menu-left menu-style">
+                         
+                         <li  id="d5ba_e13e_71a3_a567">
+                             
+                                 <a onclick="hashFun('d5ba_e13e_71a3_a567')" >云谷首页</a>
+                             
+                         </li>
+                         
+                     </ul>
+                 </div>
+             </div>
+         </div>
+     </div>
+ </div>
+
+<div id="mobileMenu">
+    <div class="menu-wrapper mobile-menu-wrapper">
+        <div class="menu-list-wrapper">
+            <div class="nav-wrapper">
+                <div class="mobile-news-menu" id="second-mobile-news-menu">
+                    <span class="list"><i class="iconfont">&#xe61e;</i></span>
+                    <div class="logo"><a href="index.html"><i class="iconfont">&#xe636;</i></a></div>
+                    <div class="userAndLang">
+                        <span class="userMsg">
+                            <span class="userImgBox">
+                                <span class="userImg"></span>
+                                <span class="userImgdefault"></span>
+                            </span>
+                
+                            
+                            <ul class="selectTips">
+                                <li class="accountSet">账号设置</li>
+                                <li class="admissionApply">入学申请</li>
+                                <li class="application">应聘信息</li>
+                                <li class="exit">退出</li>
+                            </ul>
+                        </span>
+                        <span class="person"><i class="iconfont">&#xe617;</i></span>
+                        <span class="changeLangunge" id="changLanguageButtonMobile"><i class="iconfont iconInnerText">&#xe625;</i></span>
+                    </div>
+                    <ul class="sliderMenu">
+                        
+                         <li class="menuType">
+                            <a key="/about" href="about" class="aLink">关于云谷</a>
+                            <span class="rightIcon"><i class="iconfont">&#xe61a;</i></span>
+                         </li>
+                        
+                        
+                         <li class="menuType">
+                            <a key="/kindergarten" href="kindergarten" class="aLink">幼儿园</a>
+                            <span class="rightIcon"><i class="iconfont">&#xe61a;</i></span>
+                         </li>
+                        
+                         <li class="menuType">
+                            <a key="/primary" href="primary" class="aLink">小学</a>
+                            <span class="rightIcon"><i class="iconfont">&#xe61a;</i></span>
+                         </li>
+                        
+                         <li class="menuType">
+                            <a key="/middle" href="middle" class="aLink">初中</a>
+                            <span class="rightIcon"><i class="iconfont">&#xe61a;</i></span>
+                         </li>
+                        
+                         <li class="menuType">
+                            <a key="/senior" href="senior" class="aLink">高中</a>
+                            <span class="rightIcon"><i class="iconfont">&#xe61a;</i></span>
+                         </li>
+                        
+                         <li class="menuType">
+                            <a key="/cooperation_exchange" href="cooperation_exchange" class="aLink">合作与交流</a>
+                            <span class="rightIcon"><i class="iconfont">&#xe61a;</i></span>
+                         </li>
+                        
+                         <li class="menuType">
+                            <a key="/recruit" href="recruit" class="aLink">应聘</a>
+                            <span class="rightIcon"><i class="iconfont">&#xe61a;</i></span>
+                         </li>
+                        
+                         <li class="menuType">
+                            <a key="/recruit_students" href="recruit_students" class="aLink">入学</a>
+                            <span class="rightIcon"><i class="iconfont">&#xe61a;</i></span>
+                         </li>
+                        
+                    </ul>
+                    <div class="opacity"></div>
+                </div> 
+            </div>
+            <div class="nav-detail-wrapper">
+                <div class="second-menu-mobile">
+                    <span class="mainTips">
+                        <span class="mainTitle"><a>云谷首页</a></span>
+                        <span class="mainIcon"><i class="iconfont">&#xe634;</i></span>
+                    </span>
+                </div>
+                <ul class="secondSlideMenu">
+                    
+                    
+                       <span></span>
+                    
+                    
+                </ul>
+                
+            </div>
+        </div>
+    </div>
+</div> 
+    
+
+    
+
+    <!-- 将来页面要往这里填充具体的模板内容 -->
+    <div class="allModules">
+       
+    <!-- 填充main部分的代码内容 -->
+    <!--此处模板template_id:21--><div id="J_banner_56d1_152c94">
+    <div class="section">
+       <div class="index-banner">
+            
+               <div class="yg-banner">
+                 <div class="cover"></div>
+                 <div class="banner-text">
+                    <div class="row">
+                        <div class="cols">
+                            
+                                <h3 class="banner-title">欢迎来到云谷学校</h3>
+                            
+                                <p class="banner-description">让每一位孩子成为最好的自己。</p>
+                             
+                            <p class="banner-button">
+                               <a class="white-button common-button" target=_self href="index.html"></a>
+                            </p>
+                        </div>
+                    </div>
+                 </div>
+                 <div class="banner-img absoluteEle">
+                    
+                    
+                        <div class="resize-img" 
+                             style="background: url(https://yungu-public.oss-cn-hangzhou.aliyuncs.com/yungu-website/29160938076480348%E7%85%A7%E7%89%87.jpg?x-oss-process=image/resize,m_lfit,w_1240/auto-orient,1) no-repeat center center / cover;"></div>
+                    
+                </div>
+               </div>
+            
+       </div>
+      <div class="back-cover">
+        <img src="https://yungu-xiaozhao.oss-cn-hangzhou.aliyuncs.com/yungu-website/21362980026458090%E9%A6%96%E9%A1%B5.png" class="cover-img"/>
+      <img src="https://yungu-xiaozhao.oss-cn-hangzhou.aliyuncs.com/yungu-website/70630927057398216%E9%A6%96%E9%A1%B5.png" class="cover-img-mobile"/>
+
+    </div>
+      <div class="yg-index-footer">
+                    <span class="yg-footer-left-tips yg-border-right">
+                        <span>浙公网安备 330100602009823号</span>
+                    </span>
+                    <span class="yg-footer-left-tips yg-border-right">浙ICP备17004649号</span>
+                    <span class="yg-footer-left-tips">©️ 2016-现在yungu.org版权所有</span>
+                </div>
+    </div>
+    
+  
+</div>
+<script id="test_56d1_152c94" type="application/json">{"txtImgVideo":[{"inputNumber":3,"newWindowState":false,"chineseText":["欢迎来到云谷学校","让每一位孩子成为最好的自己。",""],"englishText":["Welcome to Hangzhou Yungu School","Bring out the best in every child.",""],"chineseUrl":"","englishUrl":"","imageOrVideo":[{"uid":"rc-upload-1573197064434-9","name":"照片.jpg","status":"done","type":"image/jpeg","size":3628194,"src":"https://yungu-public.oss-cn-hangzhou.aliyuncs.com/yungu-website/29160938076480348%E7%85%A7%E7%89%87.jpg","sourceType":1,"uploadType":1}],"text":["欢迎来到云谷学校","让每一位孩子成为最好的自己。",""],"url":""}],"templateBuiltInParamsList":[{"type":"ARRAY","classification":4,"name":"txtImgVideo"}]}</script>
+
+    </div>
+
+     
+
+    <!-- 公共的js  -->
+    <script src="public/lib/js/jquery.3.1.1.min.js"></script>
+    <script src="public/lib/js/swiper.min.js"></script>
+    <script src="public/lib/js/secondHeader.js"></script>
+    <script src="public/js/mockData.js"></script>
+    
+    <!-- 填充script外链内容 -->
+    <script type="text/javascript" src="public/lib/js/fullpage.min.js"></script><script type="text/javascript" src="public/lib/js/slick.js"></script><script type="text/javascript" src="public/lib/js/jquery.easing.min.js"></script>
+    <!-- 合并当前页面的js -->
+    <script>
+        window.onload = function(){
+            (function(){
+                $('loadBg').fadeOut()
+                setTimeout( function(){
+                    $('loadIcon').hide()
+                    $('#loading').fadeOut()
+                
+function getClientHeight() {
+  
+  var clientHeight=0;
+  if(document.body.clientHeight && document.documentElement.clientHeight) {
+    var clientHeight = (document.body.clientHeight < document.documentElement.clientHeight)
+    	? document.body.clientHeight
+    	: document.documentElement.clientHeight;
+  }else {
+    var clientHeight = (document.body.clientHeight > document.documentElement.clientHeight)
+    	? document.body.clientHeight
+    	: document.documentElement.clientHeight;
+  }
+  return clientHeight;
+}
+
+
+function callbackEle(ele, instance) {
+    ele.find('.banner-title').delay(100).animate({
+      	'opacity': 1,
+        'bottom': instance
+    }, 'normal', 'swing');
+    ele.find('.banner-description').delay(100).animate({
+      	'opacity': 1,
+        'bottom': instance
+    },'normal', 'swing');
+    ele.find('.common-button').delay(150).animate({
+      	'opacity': 1
+    }, 'normal', 'swing');
+}
+
+
+
+$(function() {
+  var contentConfigure =  JSON.parse(document.getElementById("test_56d1_152c94").innerHTML);
+  let isDots = false
+  if(contentConfigure.txtImgVideo && contentConfigure.txtImgVideo.length > 1){
+  	isDots = true
+  }else{
+  	isDots = false
+  }
+  
+  
+  $("menu-wrapper ").hide()
+    $("#J_banner_56d1_152c94 ").fullpage({
+        controlArrows: false,
+        slidesNavigation: true,
+        continuousVertical: true,
+        continuousHorizontal: true,
+        scrollingSpeed: 1000,
+        loopHorizontal: true,
+        scrollOverflow:false,
+      autoScrolling:true
+    })
+    
+  	$("#J_banner_56d1_152c94 .index-banner ").slick({
+        autoplay: true, 
+        arrows: false,
+        dots: isDots,
+        infinite: true,
+        speed: 1500,
+        autoplaySpeed: 3000,
+        pauseOnHover: false,
+        pauseOnDotsHover: false,
+        
+        
+        responsive: [
+          {
+            breakpoint: 992,
+            settings: {
+              dots: isDots
+            }
+          }
+        ]
+    });
+    $("#J_banner_56d1_152c94 .index-banner ").init(function(slick){
+        callbackEle($(".index-banner .yg-banner.slick-current "), 0)
+    });
+    $("#J_banner_56d1_152c94 .index-banner ").on('afterChange',function(slick,currentSlide){
+        callbackEle($("#J_banner_56d1_152c94 .index-banner .yg-banner.slick-current "), 0);
+        callbackEle($("#J_banner_56d1_152c94 .index-banner .yg-banner.slick-current ").siblings(), '-100vh');
+    })
+
+    $("#J_banner_56d1_152c94 .index-banner ").on('afterChange',function(event,slick,currentSlide){
+        var video = $($(".index-banner .yg-banner ")[currentSlide+1]).find(".back-video")[0];
+        if(video) {
+            video.play();
+            $("#J_banner_56d1_152c94 .index-banner ").slick("slickPause");
+            video.onended = function() {
+                $("#J_banner_56d1_152c94 .index-banner ").slick("slickPlay");
+            }
+        }else {
+            $("#J_banner_56d1_152c94 .index-banner ").slick("slickPlay");
+        }
+    })
+
+})
+                },800)
+            })();
+          
+        }
+    </script>
+
+    <!-- 统计代码 -->
+    <div style="display:none;">
+      <script
+        type="text/javascript"
+        src="https://s95.cnzz.com/z_stat.php?id=1261257612&web_id=1261257612"
+      ></script>
+      <script>
+        window.sendCZC = function(args) {
+          window._czc && args && window._czc.push(args);
+        };
+
+      </script>
+    </div>
+  </body>
+</html>

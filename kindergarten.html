@@ -1,0 +1,2749 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="format-detection" content="telephone=no" />
+    <!-- 页面公共 css -->
+    <link rel="stylesheet" type="text/css" href="public/css/common.css" />
+    <link rel="stylesheet" type="text/css" href="public/css/menu.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="public/css/secondHeader.css"
+    />
+    <link rel="stylesheet" type="text/css" href="public/lib/css/animate.css" />
+    <link rel="stylesheet" type="text/css" href="public/css/robot.css" />
+    
+    <title>幼儿园</title>
+    <!-- 引入css外链 -->
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/css/swiper.min.css" />
+    <!-- 合并当前页面的style -->
+    <style type="text/css">/* 编写 CSS 样式代码 */
+/* 校区地址轮播*/
+@font-face {
+  font-family: 'yungu';  /* project id 1119561 */
+  src: url('https://at.alicdn.com/t/font_1119561_o13ctcywam.eot');
+  src: url('https://at.alicdn.com/t/font_1119561_o13ctcywam.eot?') format('embedded-opentype'),
+  url('https://at.alicdn.com/t/font_1119561_o13ctcywam.woff2') format('woff2'),
+  url('https://at.alicdn.com/t/font_1119561_o13ctcywam.woff') format('woff'),
+  url('https://at.alicdn.com/t/font_1119561_o13ctcywam.ttf') format('truetype'),
+  url('https://at.alicdn.com/t/font_1119561_o13ctcywam.svg') format('svg');
+}
+.recruitSwipe {
+    width: 100%;
+    position: relative;
+}
+
+.recruitSwipe .swiper-container-banner .swiper-pagination {
+    bottom: 20%;
+}
+
+.recruitSwipe .swiper-container-banner .swiper-pagination .swiper-pagination-bullet {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #fff;
+    margin: 0 7px;
+    opacity: 0.6;
+}
+
+.recruitSwipe .swiper-container-banner .swiper-pagination .swiper-pagination-bullet-active {
+
+
+    background: #fff;
+    opacity: 1;
+}
+
+.recruitSwipe .swiper-container-banner .swiper-wrapper {
+    height: 100vh;
+}
+
+.recruitSwipe .swiper-container-banner .swiper-wrapper .swiper-slide {
+    position: relative;
+}
+
+
+.recruitSwipe .swiper-container-banner .swiper-wrapper .swiper-slide img {
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+}
+
+.recruitSwipe .swiper-container-banner .swiper-wrapper .swiper-slide .mobilePosterImg {
+    display: none;
+}
+
+.recruitSwipe .swiper-container-banner .swiper-wrapper .swiper-slide .cover {
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    background: rgba(0, 0, 0, 0.2)
+}
+
+.recruitSwipe .swiper-container-banner .swiper-wrapper .swiper-slide .schoolIntroduce {
+    position: absolute;
+    top: 27%;
+    left: 14%;
+
+    color: #fff;
+    width: 30%;
+}
+
+.recruitSwipe .swiper-container-banner .swiper-wrapper .swiper-slide .schoolIntroduce .schoolName {
+    font-size: 38px;
+    margin-bottom: 8px;
+    font-weight: normal;
+    font-family: PingFangSC-Semibold, sans-serif;
+  	line-height:44px;
+}
+
+.recruitSwipe .swiper-container-banner .swiper-wrapper .swiper-slide .schoolIntroduce .description {
+    font-size: 16px;
+    line-height: 26px;
+}
+
+.recruitSwipe .swiper-container-banner .swiper-wrapper .swiper-slide .schoolIntroduce .detailIntroduce {
+    font-size: 16px;
+    margin: 40px 0;
+    line-height: 26px;
+}
+
+.recruitSwipe .swiper-container-banner .swiper-wrapper .swiper-slide .schoolIntroduce .checkAddress {
+    display: inline-block;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 20px;
+    margin-top: 32px;
+    font-size: 16px;
+}
+
+.recruitSwipe .swiper-container-banner .swiper-wrapper .swiper-slide .schoolIntroduce .checkAddress .vedio {
+    padding: 0 24px;
+    display: inline-block;
+    background: #0258bf;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-right: 20px;
+    font-size: 16px;
+    display: none;
+    cursor: pointer;
+}
+
+.recruitSwipe .swiper-container-banner .swiper-wrapper .swiper-slide .schoolIntroduce .checkAddress .knowmore {
+    padding: 0 24px;
+    display: inline-block;
+    border-radius: 8px;
+    background: #fff;
+    color: #0258bf;
+    font-size: 16px;
+    transition: background .4s ease;
+    -webkit-transition: background .4s ease;
+}
+
+.recruitSwipe .bannerCover {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    z-index: 29;
+}
+
+.recruitSwipe .bannerCover .coverImg {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    display: block;
+    pointer-events: none;
+}
+
+.recruitSwipe .bannerCover .coverImgMobile {
+
+    display: none;
+}
+
+.recruitSwipe .swiper-container-banner .swiper-wrapper .swiper-slide .getShow {
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    -o-object-fit: cover;
+    position: absolute;
+    top: 0;
+    z-index: -1;
+}
+
+.recruitSwipe .swiper-container-banner .swiper-wrapper .swiper-slide .pause-button {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    color: #fff;
+    font-size: 38px;
+    cursor: pointer;
+    z-index: 100;
+}
+
+.recruitSwipe .bannerColor {
+    width: 100%;
+    height: 20%;
+    position: absolute;
+    bottom: 0;
+    z-index: 28;
+    background-image: linear-gradient(to top, rgba(2, 88, 191, 0.5), rgba(2, 88, 191, 0))
+}
+
+.seniorCommon .recruitSwipe .bannerColor {
+    background-image: linear-gradient(to top, rgba(2, 88, 191, 0.5), rgba(36, 88, 236, 0))
+}
+
+.primaryCommon .recruitSwipe .bannerColor {
+    background-image: linear-gradient(to top, rgba(63, 176, 199, 0.5), rgba(63, 176, 199, 0));
+}
+
+.middleCommon .recruitSwipe .bannerColor {
+    background-image: linear-gradient(to top, rgba(65, 146, 222, 0.5), rgba(65, 146, 222, 0));
+}
+
+.kindGarten .recruitSwipe .bannerColor {
+    background-image: linear-gradient(to top, rgba(101, 169, 81, 0.5), rgba(101, 169, 81, 0));
+}
+
+.kindGarten .swiper-container-banner .swiper-wrapper .swiper-slide .schoolIntroduce .schoolName {
+    font-size: 50px;
+    letter-spacing: -6px;
+    font-family: kinderFont;
+}
+
+.kindGarten .swiper-container-banner .swiper-wrapper .swiper-slide .schoolIntroduce .description {
+    line-height: 30px;
+    font-size: 22px;
+}
+
+.kindGarten .swiper-container-banner .swiper-wrapper .swiper-slide .schoolIntroduce .checkAddress .knowmore {
+    color: #65a951;
+    font-size: 18px;
+}
+
+.primaryCommon .swiper-container-banner .swiper-wrapper .swiper-slide .schoolIntroduce .checkAddress .knowmore {
+    color: #3fb0c7;
+}
+
+.middleCommon .swiper-container-banner .swiper-wrapper .swiper-slide .schoolIntroduce .checkAddress .knowmore {
+    color: #4192de;
+}
+
+.seniorCommon .swiper-container-banner .swiper-wrapper .swiper-slide .schoolIntroduce .checkAddress .knowmore {
+    color: #2458ec;
+}
+.recruitSwipe .swiper-container-banner .swiper-wrapper .swiper-slide .voice{
+	cursor: pointer;
+    position: absolute;
+    z-index: 999999;
+  	width:40px;
+    bottom:25vh;
+  	right:0;
+  	font-size: 25px;
+  	color:#fff;
+}
+
+@media screen and (max-width: 1024px) {
+    .recruitSwipe .swiper-container-banner .swiper-wrapper .swiper-slide .mobilePosterImg {
+        display: block;
+    }
+
+    .recruitSwipe .swiper-container-banner .swiper-wrapper .swiper-slide .schoolIntroduce {
+        width: 80%;
+        left: 8%;
+    }
+
+    .recruitSwipe .swiper-container-banner .swiper-wrapper .swiper-slide .schoolIntroduce .schoolName {
+        font-size: .24rem;
+        margin-bottom: 8px;
+    }
+
+    .recruitSwipe .swiper-container-banner .swiper-wrapper .swiper-slide .schoolIntroduce .description {
+        font-size: .14rem;
+        line-height: 0.2rem;
+    }
+
+    .recruitSwipe .swiper-container .swiper-wrapper .swiper-slide .schoolIntroduce .checkAddress {
+        margin-top: .3rem;
+        display: block;
+        width: 3rem;
+    }
+
+    .recruitSwipe .swiper-container-banner .swiper-wrapper .swiper-slide .schoolIntroduce .checkAddress .knowmore {
+        padding: 0 6.2vw;
+        line-height: .38rem;
+        float: left;
+        font-size: 0.14rem;
+    }
+
+    .recruitSwipe .swiper-container-banner .swiper-wrapper .swiper-slide .schoolIntroduce .checkAddress .vedio {
+        float: left;
+        display: inline-block;
+    }
+
+    .recruitSwipe .swiper-container-banner .swiper-wrapper .swiper-slide .getShow {
+        position: fixed;
+        height: 100vh;
+        top:0;
+        object-fit: contain;
+        background: #000 ;
+        z-index: 9999;
+        display: none;
+
+    }
+
+    .recruitSwipe .bannerCover .coverImgMobile {
+        width: 100%;
+        position: absolute;
+        bottom: 0;
+        display: block;
+    }
+
+    .recruitSwipe .bannerCover .coverImg {
+
+        display: none;
+    }
+
+    .kindGarten .swiper-container-banner .swiper-wrapper .swiper-slide .schoolIntroduce .schoolName {
+        font-size: 0.34rem
+    }
+
+    .kindGarten .swiper-container-banner .swiper-wrapper .swiper-slide .schoolIntroduce .description {
+        line-height: 0.28rem;
+        font-size: .19rem;
+    }
+
+    .kindGarten .swiper-container-banner .swiper-wrapper .swiper-slide .schoolIntroduce .checkAddress .knowmore {
+        font-size: 0.18rem;
+        color: #6cc542;
+    }
+
+    .recruitSwipe .swiper-container-banner .swiper-wrapper .swiper-slide .pause-button {
+        top: 40px;
+        right: 40px;
+        display: none;
+        left: unset;
+        z-index: 9999;
+        position: fixed;
+        font-size: 0.24rem;
+    }
+  .recruitSwipe .swiper-container-banner .swiper-pagination{
+  	width:auto;
+    left:43%;
+    bottom:22%;
+  }
+  .recruitSwipe .swiper-container-banner .swiper-pagination .swiper-pagination-bullet{
+  	display: block;
+    float: left;
+  }
+}/* 编写 CSS 样式代码 */
+.grainPortrait {
+    width: 100%;
+    position: relative;
+  	background:#f9f9f9;
+}
+
+.grainPortrait img {
+    width: 100%;
+}
+
+.grainPortrait .grainCenter {
+    width: 80%;
+    text-align: center;
+    padding: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -55%)
+}
+.grainPortrait .grainCenter .mainTitle{
+	font-family: PingFangSC-Semibold, sans-serif;
+  	color:#333;
+    font-size:38px;
+}
+.grainPortrait .grainCenter .text {
+    font-size: 28px;
+    font-weight: normal;
+  	color:#666;
+    margin-top: 8px;
+}
+
+.grainPortrait .grainCenter .imgList {
+    margin-top: 100px;
+}
+
+.grainPortrait .grainCenter .imgList .imgTips {
+    display: inline-block;
+    width: 16vw;
+    height:16vw;
+}
+
+.grainPortrait .grainCenter .imgList .imgTips:nth-child(2) {
+    margin: 0 10vw;
+}
+
+.grainPortrait .grainCenter .imgList .imgTips img {
+    border-radius: 50%;
+    object-fit: cover;
+  	height:100%;
+}
+.kindGarten .grainPortrait {
+  	background:#fffef5;
+}
+.kindGarten .grainPortrait .grainCenter .mainTitle {
+   font-family: kinderFont;
+    font-size: 50px;
+    letter-spacing: -6px;
+}
+.kindGarten .grainPortrait .grainCenter .text {
+    font-size: 38px;
+  letter-spacing: -6px;
+}
+
+@media screen and (max-width:1024px){
+  	
+	.grainPortrait .grainCenter{
+    	width:100%;
+        padding-top: 0.2rem;
+    }
+  .grainPortrait .grainCenter .mainTitle{
+  	font-size:0.24rem;
+  }
+  	.grainPortrait .grainCenter .text{
+    	font-size:0.18rem;
+    }
+  	.kindGarten .grainPortrait .grainCenter .text{
+    	font-size:0.24rem;
+    }
+  	.grainPortrait .grainCenter .imgList{
+    	margin-top:0.3rem;
+    }
+  	.grainPortrait .grainCenter .imgList .imgTips{
+    	width:1rem;
+      height:1rem;
+    }
+  	.grainPortrait .grainCenter .imgList .imgTips:nth-child(2){
+    	margin:0;
+    }
+  	.kindGarten .grainPortrait .grainCenter .mainTitle{
+    	font-size:0.34rem;
+    }
+  	
+}.yg-right-picture {
+    position: relative;
+    width: 100%;
+    z-index: 22;
+}
+
+.yg-right-picture .yg-right-container {
+    position: relative;
+    background: #f9f9f9;
+    padding-bottom: 50px;
+    z-index: 21;
+    width: 100%;
+}
+
+.yg-right-picture .yg-right-container:after {
+    display: block;
+    content: "";
+    clear: both;
+    visibility: hidden;
+}
+
+.yg-right-picture .yg-right-container .yg-right-picture-text {
+    width: 50%;
+    position: absolute;
+    padding-left: 15vw;
+    padding-right: 3vw;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+    color: #999;
+}
+
+.yg-right-container .yg-right-picture-text .yg-right-picture-title {
+    font-size: 38px;
+    color: #333;
+    font-weight: normal;
+    font-family: PingFangSC-Semibold, sans-serif;
+}
+
+.yg-right-container .yg-right-picture-text .yg-right-picture-description {
+    line-height: 26px;
+    margin: 12px 0 32px;
+    font-size: 16px;
+}
+
+.yg-right-container .yg-right-picture-text .yg-rigth-picture-button {
+    cursor: pointer;
+
+    font-size: 16px;
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    color: #fff;
+    background: #0258bf;
+    display: inline-block;
+    line-height: 38px;
+    width: 110px;
+    text-align: center;
+    transition: background .4s ease;
+    -webkit-transition: background .4s ease;
+}
+
+.yg-right-picture .yg-right-container .yg-right-picture-img {
+    width: 50%;
+    float: right;
+    text-align: right;
+    position: relative;
+    height: 90vh;
+}
+
+/* wm */
+.yg-right-picture .yg-right-container .mainTitle {
+    text-align: center;
+    font-size: 1.8vw;
+}
+
+.yg-right-picture .yg-right-container .yg-right-picture-bkg {
+    width: 50%;
+    float: left;
+}
+
+.yg-right-picture .yg-right-container img {
+    width: 100%;
+    display: block;
+    height: 100%;
+}
+
+.yg-right-picture .yg-right-container .yg-right-picture-img .colorCoverRight {
+    width: 100%;
+    height: 30%;
+    position: absolute;
+    bottom: 0;
+    display: block;
+    background-image: linear-gradient(to top, rgba(2, 88, 191, 0.8), rgba(2, 88, 191, 0));
+}
+
+.yg-right-picture .yg-right-container .yg-right-picture-cover {
+    position: relative;
+    height: 100%;
+}
+
+.primaryCommon .yg-right-picture .yg-right-container .yg-right-picture-img .colorCoverRight {
+    background-image: linear-gradient(to top, rgba(63, 176, 199, 0.8), rgba(63, 176, 199, 0));
+}
+
+.primaryCommon .yg-right-container .yg-right-picture-text .yg-rigth-picture-button {
+    background: rgba(63, 176, 199)
+}
+
+.middleCommon .yg-right-picture .yg-right-container .yg-right-picture-img .colorCoverRight {
+    background-image: linear-gradient(to top, rgba(65, 146, 222, 0.8), rgba(65, 146, 222, 0));
+}
+
+.middleCommon .yg-right-container .yg-right-picture-text .yg-rigth-picture-button {
+    background: rgba(65, 146, 222)
+}
+
+.kindGarten .yg-right-container .yg-right-picture-text .yg-rigth-picture-button {
+    background: rgba(101, 169, 81);
+    font-size: 18px;
+}
+
+.kindGarten .yg-right-picture .yg-right-container .yg-right-picture-img .colorCoverRight {
+    background-image: linear-gradient(to top, rgba(101, 169, 81, 0.8), rgba(101, 169, 81, 0));
+}
+
+.kindGarten .yg-right-picture .yg-right-container {
+    background: #fffef5;
+}
+
+.kindGarten .yg-right-container .yg-right-picture-text .yg-right-picture-title {
+    font-size: 50px;
+    letter-spacing: -6px;
+    font-family: 'kinderFont';
+}
+
+.kindGarten .yg-right-container .yg-right-picture-text .yg-right-picture-description {
+    line-height: 30px;
+    font-size: 22px;
+}
+
+@media screen and (max-width: 1024px) {
+    .yg-right-picture .yg-right-container {
+        padding: .48rem 0rem 0rem;
+        margin-bottom: -0.01rem;
+    }
+
+
+    .yg-right-picture .yg-right-container .yg-right-picture-cover {
+        margin-left: -0.01rem;
+    }
+
+    .yg-right-picture .yg-right-container .yg-right-picture-img {
+        width: 80vw;
+        height: auto;
+    }
+
+    .yg-right-picture .yg-right-container .yg-right-picture-bkg {
+        width: 100%;
+        margin-bottom: .3rem;
+    }
+
+    .yg-right-picture .yg-right-container .yg-right-picture-text {
+        width: 100%;
+        position: unset;
+        padding-left: 8%;
+        transform: unset;
+    }
+
+    .yg-right-container .yg-right-picture-text .yg-right-picture-title {
+        font-size: .24rem;
+    }
+
+    .yg-right-container .yg-right-picture-text .yg-right-picture-description {
+        width: 80vw;
+        margin: 0.08rem 0 0.3rem;
+        font-size: 0.14rem;
+        line-height: 0.2rem;
+    }
+
+    .yg-right-container .yg-right-picture-text .yg-rigth-picture-button {
+        padding: 0rem .25rem;
+        display: block;
+        width: 1.3rem;
+        text-align: center;
+        line-height: 0.4rem;
+        font-size: 0.14rem;
+    }
+
+    .yg-right-picture .yg-right-container .mainTitle {
+        margin-bottom: .24rem;
+        font-size: 7.8vw;
+    }
+
+    .kindGarten .yg-right-container .yg-right-picture-text .yg-right-picture-title {
+        font-size: 0.34rem;
+    }
+
+    .kindGarten .yg-right-container .yg-right-picture-text .yg-right-picture-description {
+        font-size: 0.19rem;
+        line-height: 0.28rem;
+    }
+
+    .kindGarten .yg-right-container .yg-right-picture-text .yg-rigth-picture-button {
+        font-size: 0.18rem !important ;
+    }
+
+}.yg-left-picture {
+    position: relative;
+    width: 100%;
+    z-index: 22;
+}
+.yg-left-picture .yg-left-container {
+    position: relative;
+    background: #f9f9f9;
+    padding-bottom:50px;
+    z-index: 21;
+    width: 100%;
+}
+.yg-left-picture .yg-left-container:after {
+    display: block;
+    content: "";
+    clear: both;
+    visibility: hidden;
+}
+.yg-left-picture .yg-left-container .yg-left-picture-text {
+    width: 50%;
+    position: absolute;
+    right: 0;
+    padding-right: 15%;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #999;
+    padding-left: 3vw;
+}
+.yg-left-container .yg-left-picture-text .yg-left-picture-title {
+    font-size: 38px;
+    color: #333;
+    font-weight:normal;
+    font-family: PingFangSC-Semibold, sans-serif;
+}
+.yg-left-container .yg-left-picture-text .yg-left-picture-description  {
+    line-height: 26px;
+    margin: 12px 0 32px;
+    font-size: 16px;
+}
+.yg-left-container .yg-left-picture-text .yg-left-picture-button {
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    color: #fff;
+    background: #0258bf;
+    display:inline-block;
+  line-height:38px;
+  width: 110px;
+    text-align: center;
+  transition: background .4s ease;
+    -webkit-transition: background .4s ease;
+}
+.yg-left-picture .yg-left-container .yg-left-picture-img {
+    width: 50%;
+    height: 90vh;
+    float: left;
+    text-align: left;
+  position:relative;
+}
+
+/*wm*/
+.yg-left-picture .yg-left-container .yg-left-picture-bkg{
+    width: 50%;
+    float: left;
+}
+
+.yg-left-picture .yg-left-container img{
+    width: 100%;
+    display:block;
+  	height:100%;
+}
+
+.yg-left-picture .yg-left-container .colorCover{
+    width: 100%;
+    height: 30%;
+    position: absolute;
+    bottom: 0;
+  display:block;
+  background-image:linear-gradient(to top, rgba(2,88,191,0.8), rgba(2,88,191,0));
+}
+.yg-left-picture .yg-left-container .yg-left-picture-cover{
+	position:relative;
+  	height:100%;
+}
+.yg-left-container .yg-left-picture-text .contactUs{
+	font-size: 14px;
+    color: #0258BF;
+    letter-spacing: -0.5px;
+    text-align: justify;
+    line-height: 22px;
+  display:none;
+}
+
+.primaryCommon .yg-left-picture .yg-left-container .colorCover{
+	background-image:linear-gradient(to top, rgba(63,176,199,0.8),rgba(63,176,199,0));
+}
+.primaryCommon .yg-left-container .yg-left-picture-text .yg-left-picture-button{
+	background:rgb(63,176,199)
+}
+
+.middleCommon .yg-left-picture .yg-left-container .colorCover{
+	background-image:linear-gradient(to top, rgba(65,146,222,0.8), rgba(65,146,222,0));
+}
+.middleCommon .yg-left-container .yg-left-picture-text .yg-left-picture-button{
+	background:rgb(65,146,222)
+}
+
+
+.kindGarten .yg-left-container .yg-left-picture-text .yg-left-picture-button{
+	background:rgb(101,169,81);
+  font-size:18px;
+}
+.kindGarten .yg-left-picture .yg-left-container .colorCover{
+	background-image:linear-gradient(to top, rgba(101,169,81,0.8), rgba(101,169,81,0));
+}
+.kindGarten .yg-left-picture .yg-left-container {
+	background:#fffef5;
+}
+.kindGarten .yg-left-container .yg-left-picture-text .yg-left-picture-title {
+    font-size: 50px;
+  letter-spacing: -6px;
+  font-family: kinderFont;
+}
+.kindGarten .yg-left-container .yg-left-picture-text .yg-left-picture-description  {
+    line-height: 30px;
+    font-size: 22px;
+}
+
+/* wm */
+@media screen and (max-width: 1024px) {
+  .yg-left-picture .yg-left-container {
+    padding: .48rem 0 .5rem;
+    margin-bottom: -0.01rem;
+}
+
+.yg-left-picture .yg-left-container .yg-left-picture-cover {
+    margin-right: -0.01rem;
+}
+
+.yg-left-picture .yg-left-container .yg-left-picture-img {
+    width: 3rem;
+  	height:auto;
+}
+
+.yg-left-picture .yg-left-container .yg-left-picture-bkg {
+    width: 100%;
+    float: right;
+}
+
+.yg-left-picture .yg-left-container .yg-left-picture-text {
+    position: unset;
+    width: 3rem;
+    padding-left: 0;
+    padding-right: 0.3rem;
+    float: right;
+    transform: unset;
+
+}
+
+.yg-left-container .yg-left-picture-text .yg-left-picture-title {
+    font-size: .24rem;
+    text-align: right;
+
+}
+
+.yg-left-container .yg-left-picture-text .yg-left-picture-description {
+    margin: 0.13rem 0 0.3rem;
+    font-size: .14rem;
+  	line-height: 0.2rem;
+}
+
+.yg-left-container .yg-left-picture-text .yg-left-picture-button {
+    padding: 0rem .25rem;
+    float: right;
+  	text-align:center;
+  width:1.3rem;
+  line-height:0.4rem;
+  font-size: 0.14rem;
+}
+  
+.yg-left-container .yg-left-picture-text .contactUs{
+	display: none;
+}
+  .kindGarten .yg-left-picture .yg-left-container {
+	background:#fffef5;
+}
+  .kindGarten .yg-left-container .yg-left-picture-text .yg-left-picture-title{
+  	font-size:0.34rem;
+  }
+  
+  .kindGarten .yg-left-container .yg-left-picture-text .yg-left-picture-description{
+  	font-size:0.19rem;
+    line-height: 0.28rem;
+  }
+  
+.kindGarten .yg-left-container .yg-left-picture-text a{
+	font-size:0.18rem !important;
+}
+  
+}
+.yg-about-contain {
+    position: relative;
+    z-index: 22;
+    width: 100%;
+  background:#f9f9f9;
+  padding-bottom:50px;
+}
+.yg-about-contain .yg-about-main {
+    position: relative;
+    background: #f9f9f9;
+    z-index: 21;
+    width: 100%
+}
+
+.yg-about-contain .yg-about-main .yg-about-word {
+    position: absolute;
+    top: 50%;
+    left: 15%;
+    right: 0;
+    z-index: 23;
+    padding-left: 1.2vw;
+    padding-right: 1.2vw;
+    max-width: 90%;
+    margin: 0 auto;
+    transform: translateY(-50%)
+}
+.yg-about-contain .yg-about-main .yg-about-text {
+    width: 30vw;
+}
+.yg-about-contain .yg-about-main .yg-about-cover {
+    width: 100%;
+    position: relative;
+    z-index: 22;
+    /* wm */
+    margin-bottom: -1px;
+  display:block;
+}
+.yg-about-contain .yg-about-main .yg-about-title {
+    font-size: 38px;
+    color: #fff;
+  	font-weight:normal;
+  	font-family: PingFangSC-Semibold, sans-serif;
+}
+.yg-about-contain .yg-about-main .yg-about-description {
+    
+    color: #fff;
+    line-height: 26px;
+    margin: 12px 0 32px;
+    font-size: 16px;
+}
+.yg-about-contain .yg-about-main .yg-about-oper {
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    color: #fff;
+    background: #0258bf;
+    display:inline-block;
+  line-height:38px;
+  width: 110px;
+    text-align: center;
+  transition: background .4s ease;
+    -webkit-transition: background .4s ease;
+}
+
+.yg-about-contain .yg-about-main .colorCover{
+    width: 100%;
+    height: 40%;
+    position: absolute;
+    bottom: 0;
+    background-image:linear-gradient(to top, rgba(2,88,191,0.8), rgba(2,88,191,0));
+
+}
+.primaryCommon .yg-about-contain .yg-about-main .colorCover{
+	background-image:linear-gradient(to top, rgba(63,176,199,0.8),rgba(63,176,199,0));
+}
+
+.middleCommon .yg-about-contain .yg-about-main .colorCover{
+	background-image:linear-gradient(to top, rgba(65,146,222,0.8), rgba(65,146,222,0));
+}
+
+.kindGarten .yg-about-contain .yg-about-main .colorCover{
+	background-image:linear-gradient(to top, rgba(101,169,81,0.8), rgba(101,169,81,0));
+}
+
+.kindGarten  .yg-about-contain{
+	background:#fffef5;
+}
+
+.kindGarten  .yg-about-contain .yg-about-main .yg-about-title {
+    font-size: 50px;
+  	letter-spacing: -6px;
+  	font-family: kinderFont;
+}
+
+.kindGarten  .yg-about-contain .yg-about-main .yg-about-description {  
+    font-size: 22px;
+    line-height: 30px;
+}
+.kindGarten .yg-right-container .yg-right-picture-text .yg-rigth-picture-button{
+	font-size:18px;
+}
+
+/* wm */
+@media screen and (max-width: 1024px) {
+  .yg-about-contain {
+    background: #f9f9f9;
+    padding-top: 6vw;
+
+}
+
+.yg-about-contain .yg-about-main {
+    overflow: hidden;
+    margin: -0.01rem 0rem;
+}
+
+.yg-about-contain .yg-about-main .yg-about-cover {
+    width: auto;
+    height: 72vh;
+}
+
+.yg-about-contain .yg-about-main .yg-about-title {
+    font-size: .24rem;
+}
+
+.yg-about-contain .yg-about-main .yg-about-word {
+    top: 50%;
+    left: 4%;
+    padding-left: 0;
+}
+
+.yg-about-contain .yg-about-main .yg-about-text {
+    width: 100%;
+}
+
+.yg-about-contain .yg-about-main .yg-about-description {
+    width: 100%;
+    font-size:0.14rem;
+  line-height: 0.2rem;
+}
+
+.yg-about-contain .yg-about-main .yg-about-oper {
+    padding: 0 .25rem;
+  font-size:0.14rem;
+  display: block;
+    width: 1.3rem;
+      text-align: center;
+  line-height:0.4rem;
+}
+  .kindGarten .yg-about-contain{
+  	background:#fffef5;
+  }
+  .kindGarten .yg-about-contain .yg-about-main .yg-about-title{
+  	font-size:0.34rem;
+  }
+  .kindGarten .yg-about-contain .yg-about-main .yg-about-description{
+  	font-size:0.19rem;
+    line-height:0.28rem;
+  }
+  .kindGarten .yg-about-contain .yg-about-main .yg-about-oper{
+  	font-size:0.18rem
+  }
+}
+/* 编写 CSS 样式代码 */
+.onlyImgAndRemarks{
+    width: 100%;
+    text-align: center;
+    background: #f9f9f9;
+}
+.onlyImgAndRemarks .content{
+    min-width: 1100px;
+    width: 1100px;
+    margin: 0 auto;
+  	position:relative;
+}
+.onlyImgAndRemarks .content .img{
+    width: 15vw;
+    height: 15vw;
+    border-radius: 50%;
+    margin: 0 auto;
+}
+.onlyImgAndRemarks .content .img img{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+}
+.onlyImgAndRemarks .content .mainTitle{
+    font-size: 38px;
+    color: #333;
+    margin-top: 15px;
+  	font-family: PingFangSC-Semibold, sans-serif;
+}
+.onlyImgAndRemarks .content .subtitle{
+    font-size: 16px;
+    margin: 12px 0 40px;
+    color: #999;
+}
+.onlyImgAndRemarks .content .remarksSlick{
+    width: 100%;
+    overflow: hidden;
+  	opacity: 0;
+}
+.onlyImgAndRemarks .content .remarksSlick .buttonPrev{
+    font-size: 30px;
+    color: #ccc;
+    position: absolute;
+    top: 76%;
+    z-index: 20;
+    left: -4%;
+    cursor:pointer;
+  transition: all .4s ease .1s;
+    -webkit-transition: all .4s ease .1s;
+}
+.onlyImgAndRemarks .content .remarksSlick .buttonPrev:hover{
+	color: #999;
+}
+.onlyImgAndRemarks .content .remarksSlick .buttonNext{
+    font-size: 30px;
+    color: #ccc;
+    position: absolute;
+    z-index: 20;
+    right: -4%;
+    top: 76%;
+    cursor:pointer;
+  transition: all .4s ease .1s;
+    -webkit-transition: all .4s ease .1s;
+}
+.onlyImgAndRemarks .content .remarksSlick .buttonNext:hover{
+	color: #999;
+}
+.onlyImgAndRemarks .content .remarksSlick .slickCard{
+    background: #f9f9f9;
+    /* height: 260px; */
+    border-radius: 8px;
+    font-size: 16px;
+    line-height: 24px;
+    position: relative;
+    margin: 11px 0;
+}
+.onlyImgAndRemarks .content .remarksSlick .slickCard .subContent{
+    padding: 40px 40px;
+    box-shadow: 0 10px 30px rgba(153,153,153,0.1);
+    width: 90.5%;
+    margin: 0 auto 40px; 
+    border-radius: 8px;
+	background: #fff;
+}
+.onlyImgAndRemarks .content .remarksSlick .slickCard .firstText{
+    font-size: 20px;
+    line-height: 28px;
+    color: #333;
+    font-family: "zaozigongfang";
+  	transition: color .4s ease;
+    -webkit-transition: color .4s ease;
+  	height: 50px;
+
+}
+.onlyImgAndRemarks .content .remarksSlick .slickCard:hover .firstText{
+    color: #0258bf;
+}
+.onlyImgAndRemarks .content .remarksSlick .slickCard .border{
+    display: block;
+    height: 1px;
+    width: 200px;
+    background: #e6e6e6;
+    margin: 24px auto;
+
+}
+.onlyImgAndRemarks .content .remarksSlick .slickCard .secondText{
+   color: #999;
+   font-size: 14px;
+   height: 50px;
+   overflow: hidden;
+    position: relative;
+    text-align: center;
+}
+.onlyImgAndRemarks .content .remarksSlick .slickCard .secondText .describe{
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: top 0.5s ease .1s;
+
+}
+.onlyImgAndRemarks .content .remarksSlick .slickCard .secondText .describe .text{
+    font-size:20px;
+    height: 48px;
+  	display: -webkit-box;
+  	-webkit-box-orient: vertical;
+  	-webkit-line-clamp: 2;
+	overflow: hidden;
+}
+.onlyImgAndRemarks .content .remarksSlick .slickCard .secondText .learnMore{
+    width: 130px;
+    line-height: 38px;
+    font-size: 16px;
+    color: #fff;
+    background:#0258bf;
+    text-align: center;
+    margin: 20px auto;
+    display: block;
+    border-radius: 8px;
+    cursor: pointer;
+  transition: background .4s ease;
+    -webkit-transition: background .4s ease;
+
+}
+.onlyImgAndRemarks .content .remarksSlick .slickCard:hover .secondText .describe{
+    top: -60px;
+}
+.kindGarten .onlyImgAndRemarks{
+	background:#fffef5;
+}
+.kindGarten .onlyImgAndRemarks .content .mainTitle{
+	letter-spacing: -6px;
+  	font-family: kinderFont;
+  	font-size:50px;
+}
+.kindGarten .onlyImgAndRemarks .content .subtitle{
+	font-size:22px;
+}
+.kindGarten  .onlyImgAndRemarks .content .remarksSlick .slickCard{
+	background:#fffef5;
+}
+.kindGarten .onlyImgAndRemarks .content .remarksSlick .slickCard .firstText{
+	font-size:20px;
+}
+.kindGarten .onlyImgAndRemarks .content .remarksSlick .slickCard .secondText .describe .text{
+	font-size: 20px;
+}
+.kindGarten .onlyImgAndRemarks .content .remarksSlick .slickCard:hover .firstText{
+    color: #65a951;
+}
+.primaryCommon .onlyImgAndRemarks .content .remarksSlick .slickCard:hover .firstText{
+    color: #3fb0c7;
+}
+.middleCommon .onlyImgAndRemarks .content .remarksSlick .slickCard:hover .firstText{
+    color: #4192de;
+}
+@media screen and (max-width:1024px){
+	.onlyImgAndRemarks .content{
+        min-width: unset;
+		width:100%;
+    }
+  .onlyImgAndRemarks .content .mainTitle{
+  	font-size:0.24rem;
+  }
+  .onlyImgAndRemarks .content .subtitle{
+  	font-size:0.16rem;
+  }
+  .onlyImgAndRemarks .content .remarksSlick .slickCard {
+  	height:245px;
+  }
+  .onlyImgAndRemarks .content .remarksSlick .slickCard .firstText{
+  	font-size:0.16rem;
+    height: 0.4rem;
+    line-height: 0.2rem;
+  }
+  .onlyImgAndRemarks .content .remarksSlick .slickCard .secondText{
+  	height:0.4rem;
+  }
+  .onlyImgAndRemarks .content .remarksSlick .slickCard:hover .secondText .describe{
+    top: -0.4rem;
+}
+  .onlyImgAndRemarks .content .remarksSlick .slickCard .secondText .describe .text{
+  	font-size:0.14rem;
+    line-height: 0.2rem;
+    height: 0.4rem;
+  }
+  
+  	.onlyImgAndRemarks .content .remarksSlick .buttonPrev,.onlyImgAndRemarks .content .remarksSlick .buttonNext{
+       display:none;
+    }
+  .onlyImgAndRemarks .content .img{
+  	width:1.5rem;
+    height:1.5rem;
+  }
+  .onlyImgAndRemarks .content .remarksSlick .slickCard .secondText .learnMore{
+  	margin:0 auto;
+  }
+  .onlyImgAndRemarks .content .remarksSlick .swiper-slide-active .subContent{
+  	position:absolute;
+    left:50%;
+    transform: translate(-50%);
+     width: 86%;                    
+  }
+  .onlyImgAndRemarks .content .remarksSlick .swiper-slide-prev .subContent{
+  	position:absolute;
+    left:13%;
+    z-index: 1;
+  }
+  .onlyImgAndRemarks .content .remarksSlick .swiper-slide-next .subContent{
+  	position:absolute;
+    right:13%
+  }
+    .kindGarten .onlyImgAndRemarks .content .mainTitle{
+    	font-size:0.34rem;
+    }
+   
+}
+.yg-know-more {
+    position: relative;
+    width: 100%;
+    background: #f9f9f9;
+    overflow: hidden;
+    z-index: 10
+}
+
+.yg-know-more .yg-learn-more-contain {
+    width: 100%;
+
+    z-index: 25;
+    padding-right: 1.2vw;
+    margin: 0 auto;
+    position: relative;
+    text-align: center;
+    color: #999;
+    font-size: 1vw;
+    top: 5vw;
+}
+
+.yg-know-more .yg-learn-more-contain .yg-learn-more-title {
+    font-size: 32px;
+    color: #666;
+    font-weight: normal;
+}
+
+.yg-know-more .yg-learn-more-contain .yg-learn-more-tips {
+    line-height: 30px;
+    margin: 1.8rem 0 1rem;
+    font-size: 16px;
+}
+
+.yg-know-more .yg-learn-more-contain .yg-learn-more-button .register {
+    cursor: pointer;
+    padding: 0.5vw 4.2vw;
+    font-size: 18px;
+    border: 1px solid transparent;
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    color: #fff;
+    background: #0258bf;
+    text-decoration: none;
+}
+
+.yg-know-more .yg-footer {
+    position: relative;
+    width: 100%;
+}
+
+.yg-know-more .yg-footer .yg-footer-cover {
+    width: 100%;
+    position: relative;
+    z-index: 23;
+    display: block;
+}
+
+.yg-know-more .yg-footer .yg-footer-cover-mobile {
+    display: none
+}
+
+.yg-know-more .yg-footer-text {
+    position: absolute;
+    bottom: 0;
+    z-index: 24;
+    width: 80%;
+    overflow: hidden;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+
+}
+
+.yg-know-more .yg-footer-text .yg-footer-text-left {
+    float: left;
+}
+
+.yg-know-more .yg-footer-text .yg-footer-text-right {
+    float: left;
+    margin-left: 2vw;
+    color: #fff;
+    width: 84%;
+}
+
+.yg-know-more .yg-footer-text .yg-footer-text-right-top {
+    display: flex;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -o-flex;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    padding-bottom: 2%;
+    margin-bottom: 1%;
+    align-items: center;
+    justify-items: center;
+    justify-content: space-between;
+    /*fix*/
+}
+
+/*.yg-know-more .yg-footer-text .yg-footer-text-right-top p {
+    -webkit-flex: 1;
+    -moz-flex: 1;
+  padding-left:4vw;
+  
+}*/
+.yg-know-more .yg-footer-white {
+    color: #fff;
+}
+
+.yg-know-more .yg-footer-gray {
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 12px;
+    font-style: normal;
+}
+
+.yg-know-more .yg-footer-text-right-top .warm-link-title {
+    font-size: 12px;
+    text-align: left;
+    margin-bottom: 8px;
+    display: block;
+    padding-left: 4vw;
+
+}
+
+.yg-know-more .yg-footer-text-right-top .warm-link-detail {
+    padding-left: 4vw;
+    border-left: 1px solid rgba(255, 255, 255, 0.2);
+    border-right: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.yg-know-more .yg-footer-text-right-top .warm-link-detail a {
+    display: block;
+    line-height: 24px;
+    color: rgba(255, 255, 255, 0.5)
+}
+
+.yg-know-more .yg-footer-text-right-top .warm-link-detail a:hover {
+    color: #fff;
+    transition: color .4s ease;
+    -webkit-transition: color .4s ease;
+}
+
+.yg-know-more .yg-footer-text-right-top .connect-us-title {
+    font-size: 12px;
+    text-align: center;
+    padding-left: 4vw;
+}
+
+.yg-know-more .yg-footer-text .yg-footer-text-right-top .lianxiwomen a {
+    color: rgba(255, 255, 255, 1)
+}
+
+.yg-know-more .yg-footer-text-right-top .connect-us-detail {
+    font-style: normal;
+    display: inline-block;
+
+}
+
+.yg-know-more .yg-footer-text-right-top .connectEmail {
+    padding: 1vw 4vw;
+}
+
+.yg-know-more .yg-footer-text-right-top .connectCoopration .yg-footer-icon {
+    font-size: 12px;
+}
+
+.yg-know-more .yg-footer-icon {
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.5)
+}
+
+/*底部权限*/
+.yg-footer-text-right-bottom {
+    overflow: hidden;
+    padding-bottom: 15px;
+}
+
+.yg-footer-text-right-bottom .yg-copy-right {
+    float: left;
+    line-height: 30px;
+    color: rgba(255, 255, 355, 0.5);
+    font-size: 12px;
+    padding-left: 4vw;
+}
+
+.yg-footer-text-right-bottom .yg-copy-icon {
+
+    float: right;
+    font-size: 24px
+}
+
+.yg-footer-text-right-bottom .yg-copy-icon .iconList a {
+    opacity: 0.4;
+}
+
+.yg-footer-text-right-bottom .yg-copy-icon .iconList a:hover {
+    opacity: 1;
+    transition: opacity .4s ease;
+    -webkit-transition: opacity .4s ease;
+}
+
+.yg-know-more .friendlyLink {
+    /*fix*/
+
+    align-items: center;
+    justify-items: center;
+    width: 34%;
+}
+
+.yg-know-more .contactUs {
+    /*fix*/
+
+    align-items: center;
+    width: 70%;
+    /*fix*/
+}
+
+.yg-know-more .contactUs-content {
+    margin: 0
+}
+
+.yg-know-more .yg-footer-text-right-bottom .yg-copy-right .yg-footer-left-tips img {
+    width: 18px;
+    display: inline-block;
+    vertical-align: sub;
+}
+
+.yg-know-more .yg-footer-text-right-bottom .yg-copy-right .yg-border {
+    border-left: 1px solid rgba(255, 255, 255, 0.5);
+    border-right: 1px solid rgba(255, 255, 255, 0.5);
+    padding: 0 10px;
+    margin: 0 10px;
+}
+
+.yg-know-more .yg-footer-text .yg-footer-text-left .yg-footer-logo {
+    color: #fff;
+    font-size: 8vw;
+    width: 8vw;
+    display: inline-block;
+}
+
+.yg-know-more .yg-footer-text .yg-footer-text-left .yg-footer-logo img {
+    width: 100%
+}
+
+.yg-know-more .connect-us-tips {
+    padding-left: 4vw;
+}
+
+.yg-know-more .wechat {
+    width: 120px;
+    height: 120px;
+    position: absolute;
+    right: 14vw;
+    bottom: 14.5%;
+    z-index: 24;
+    display: none;
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(153, 153, 153, 0.2);
+}
+
+.yg-know-more .wechat::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    margin-left: -6px;
+    bottom: -13px;
+    width: 0;
+    height: 0;
+    border-width: 8px 6px 6px;
+    border-style: solid;
+    border-color: #fff transparent transparent;
+}
+
+.yg-know-more .wechat img {
+    width: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+
+}
+
+.yg-footer-text-right-bottom .yg-copy-icon .iconList .wechatIcon {
+    cursor: pointer
+}
+
+
+
+.kindGarten .yg-know-more {
+    background: #fffef5
+}
+
+.kindGarten .yg-know-more .yg-learn-more-contain .yg-learn-more-tips {
+    line-height: 30px;
+    font-size: 20px;
+}
+
+.kindGarten .yg-know-more .yg-learn-more-contain .yg-learn-more-button span {
+    font-size: 24px;
+}
+
+.kindGarten .yg-know-more .yg-footer-gray {
+    font-size: 16px;
+}
+
+.kindGarten .yg-know-more .yg-footer-text-right-top .warm-link-title {
+    font-size: 16px;
+}
+
+.kindGarten .yg-know-more .yg-footer-text-right-top .connect-us-title {
+    font-size: 16px;
+}
+
+
+.kindGarten .yg-footer-text-right-bottom .yg-copy-right {
+    line-height: 30px;
+    font-size: 16px;
+}
+
+
+/* wm */
+@media screen and (max-width: 1024px) {
+
+    .yg-know-more .yg-learn-more-contain .yg-learn-more-button span {
+        padding: 3vw 21.2vw;
+    }
+
+    .yg-know-more .yg-footer-text .yg-footer-text-left {
+        display: none
+    }
+
+    .yg-know-more .yg-footer {
+        overflow: hidden;
+        height: 67vw;
+    }
+
+    .yg-know-more .yg-footer .yg-footer-cover {
+        display: none;
+    }
+
+    .yg-know-more .yg-footer .yg-footer-cover-mobile {
+        width: 100%;
+        display: block;
+    }
+
+    .yg-know-more .yg-footer-text {
+        width: 100vw;
+        padding-right: 0;
+        font-size: 0.12rem;
+        bottom: 0.2rem;
+    }
+
+    .yg-know-more .yg-footer-text .yg-footer-text-right {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .yg-know-more .yg-footer-text .yg-footer-text-right-top {
+        display: inline-block;
+        border: 0rem;
+        padding-bottom: 0;
+      text-align: center;
+    }
+
+    .yg-know-more .yg-footer-text .yg-footer-text-right-top p {
+        padding-left: 0;
+      display:inline-block;
+    }
+
+    .yg-know-more .friendlyLink {
+        display: inline-block;
+        width: 100vw;
+        border-left: unset;
+        padding-left: 0;
+    }
+
+    .yg-know-more .friendlyLink p {
+        display: inline-block;
+        margin-left: 0
+    }
+
+    .yg-know-more .friendlyLink p:nth-child(2) {
+        width: 80vw;
+        font-size: 0.12rem;
+    }
+
+    .yg-know-more .yg-footer-text-right-top .friendlyLink span {
+        display: inline-block;
+        line-height: unset;
+    }
+
+    .yg-know-more .contactUs {
+        align-items: unset;
+        width: 100%;
+        display: inline-block;
+        margin-top: 0.05rem;
+    }
+
+    .yg-know-more .yg-footer-text .yg-footer-text-right-top .lianxiwomen {
+        display: inline-block;
+        margin: 0 .1rem;
+    }
+
+    .yg-know-more .yg-footer-text .yg-footer-text-right-top .lianxiwomen a {
+        font-size: .10rem;
+        color: rgba(255, 255, 255, 0.5);
+        display: inline-block;
+        height: .08rem;
+        line-height: .08rem;
+        border-right: .01rem solid rgba(255, 255, 255, 0.5);
+        padding-right: .12rem;
+
+    }
+
+    .yg-know-more .yg-footer-text-right-top .connect-us-title {
+        font-size: .12rem;
+        border: 0rem;
+        color: rgba(255, 255, 255, 0.5);
+        padding-left: 0
+    }
+
+    .yg-know-more .yg-footer-text-right-top .warm-link-title {
+        font-size: .10rem;
+        padding: 0 .1rem 0 .2rem;
+        color: rgba(255, 255, 255, 0.5);
+        display: inline-block;
+        height: .08rem;
+        border-right: .01rem solid rgba(255, 255, 255, 0.5);
+        line-height: .08rem;
+        margin-bottom: 0;
+    }
+
+    .yg-know-more .yg-footer-icon {
+        display: none;
+    }
+
+    .yg-know-more .yg-footer-text-right-top .connect-us-detail {
+        margin-right: .1rem;
+        display: inline-block;
+        padding: 0
+    }
+
+    .yg-know-more .iconList {
+        color: rgba(255, 255, 255, 0.5);
+        margin: 0rem 0 0 .75rem;
+        display: block;
+        font-size: 0.2rem;
+        opacity: 0.4;
+    }
+
+    .yg-know-more .iconList span {
+        margin-right: .1rem;
+    }
+
+    .yg-know-more .contactUs .connectEmail {
+        /*display: block;*/
+        text-align: left;
+    }
+
+    .yg-footer-text-right-bottom .yg-copy-right {
+        float:unset;
+        line-height: .18rem;
+        font-size: 0.08rem;
+        text-align: center;
+        padding-left: unset;
+    } 
+
+    /* .yg-footer-text-right-bottom .yg-copy-right span {
+        display: inline-block;
+    } */
+
+    .yg-know-more .yg-footer-text-right-bottom .yg-copy-right .yg-border {
+        border-left: none;
+        border-right: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .yg-footer-text-right-bottom .yg-copy-icon {
+        float: left;
+        width: 100%
+    }
+
+    .yg-know-more .yg-footer-text-right-top .warm-link-detail {
+        padding-left: 0;
+        border-left: none;
+        border: none;
+    }
+
+    .yg-know-more .yg-footer-text-right-top .warm-link-detail a {
+        display: inline-block;
+        font-size: 0.10rem
+    }
+
+    .yg-know-more .yg-footer-text-right-top .warm-link-detail .rightBorder {
+
+        padding: 0 .05rem;
+        margin: 0 .05rem;
+    }
+
+    .yg-know-more .yg-learn-more-contain .yg-learn-more-tips {
+        font-size: .14rem;
+    }
+
+    .yg-footer-text-right-bottom {
+        padding-bottom: 0rem;
+    }
+
+    .yg-know-more .yg-footer-gray {
+        font-size: 0.10rem;
+    }
+
+    
+
+    .yg-know-more .wechat {
+        width: 1.2rem;
+        height: 1.2rem;
+        right: 2.3rem;
+        bottom: 1.1rem;
+    }
+
+    .kindGarten .yg-know-more {
+        background: #fffef5
+    }
+
+    .kindGarten .yg-know-more .yg-learn-more-contain .yg-learn-more-tips {
+        line-height: 0.18rem;
+        font-size: 0.12rem;
+    }
+
+    .kindGarten .yg-know-more .yg-footer-gray {
+        font-size: 0.10rem;
+    }
+
+    .kindGarten .yg-know-more .yg-footer-text-right-top .warm-link-title {
+        font-size: 0.10rem;
+    }
+
+    .kindGarten .yg-know-more .yg-footer-text-right-top .connect-us-title {
+        font-size: 0.10rem;
+    }
+
+
+    .kindGarten .yg-footer-text-right-bottom .yg-copy-right {
+        line-height: 0.18rem;
+        font-size: 0.10rem;
+    }
+
+    .kindGarten .yg-know-more .yg-footer-text {
+        bottom: 0.3rem
+    }
+
+}</style>
+
+    <script>
+      var OSLOGIN_HOST = "https://yunguid.yungu.org";
+    </script>
+  </head>
+
+  <body>
+
+  <div id="loading">
+    <div class="loadBg"></div>  
+    <div class="loadIcon"></div>
+  </div>
+    
+    <!--[if lt IE 10]>
+    <script>
+        var href = window.location.href;
+        href.indexOf('prompt') < 0 && (window.location.href = '/prompt');
+        window.onerror = function() {
+          href.indexOf('prompt') < 0 && (window.location.href = '/prompt');
+          return;
+        }
+    </script>
+    <![endif]-->
+    <header>
+    <div class="ygMenu">
+        <div class="ygHeader">
+            <span class="topCover"></span>
+            <div class="ygLogo">
+                <a href="index.html">
+                    <i class="iconfont icon-logo">&#xe636;</i>
+                </a>
+            </div>
+            <ul class="header-menu menu-list">
+                
+                <li><a key="/about" href="about">关于云谷</a></li>
+                
+                <li><a key="/news" href="news">新闻</a></li>
+                
+                <li><a key="/kindergarten" href="kindergarten">幼儿园</a></li>
+                
+                <li><a key="/primary" href="primary">小学</a></li>
+                
+                <li><a key="/middle" href="middle">初中</a></li>
+                
+                <li><a key="/senior" href="senior">高中</a></li>
+                
+                <li><a key="/cooperation_exchange" href="cooperation_exchange">合作与交流</a></li>
+                
+                <li><a key="/recruit" href="recruit">应聘</a></li>
+                
+                <li><a key="/recruit_students" href="recruit_students">入学</a></li>
+                
+            </ul>
+            <ul class="header-menu header-right">
+                
+
+
+                <li class="userMsg">
+                    <span class="userImgBox">
+                        <span class="userImg"></span>
+                        <span class="userImgdefault"></span>
+                    </span>
+
+                    <span class="userName"></span>
+                    <span class="expend"><i class="iconfont icon-style iconInnerText">&#xe611;</i></span>
+                    <ul class="selectTips">
+                        <span class="arrows"></span>
+                        <li class="accountSet">账号设置</li>
+                        <li class="admissionApply">入学申请</li>
+                        <li class="application">应聘申请</li>
+                        <li class="exit">退出</li>
+                    </ul>
+                </li>
+
+
+                <li class="notUser">
+                    <a class="yg-login"><i class="iconfont icon-style">&#xe617;</i></a>
+                </li>
+
+                <li class="lang">
+                    <a id="changLanguageButton"><i class="iconfont icon-style iconInnerText">&#xe625;</i></a>
+                </li>
+            </ul>
+
+        </div>
+    </div>
+
+    <div class="mobile-news-menu" id='mobile-news-menu'>
+
+        <span class="list firstMenu"><i class="iconfont">&#xe61e;</i></span>
+        <span class="detailBack"><i class="iconfont">&#xe618;</i></span>
+        <div class="logo firstLogo"><a href="index.html"><i class="iconfont">&#xe636;</i></a></div>
+        <div class="detailTitle"><span></span></div>
+
+        <div class="userAndLang">
+            <span class="userMsg">
+                <span class="userImgBox">
+                    <span class="userImg"></span>
+                    <span class="userImgdefault"></span>
+                </span>
+
+                <ul class="selectTips">
+                    <li class="accountSet">账号设置</li>
+                    <li class="admissionApply">入学申请</li>
+                    <li class="application">应聘申请</li>
+                    <li class="exit">退出</li>
+                </ul>
+            </span>
+            <span class="person"><i class="iconfont">&#xe617;</i></span>
+            <span class="changeLangunge" id="changLanguageButtonMobile"><i
+                    class="iconfont iconInnerText">&#xe625;</i></span>
+        </div>
+        <ul class="sliderMenu">
+            
+            <li class="menuType">
+                <a key="/about" href="about" class="aLink">关于云谷</a>
+                <span class="rightIcon"><i class="iconfont">&#xe61a;</i></span>
+            </li>
+            
+            <li class="menuType">
+                <a key="/news" href="news" class="aLink">新闻</a>
+                <span class="rightIcon"><i class="iconfont">&#xe61a;</i></span>
+            </li>
+            
+            <li class="menuType">
+                <a key="/kindergarten" href="kindergarten" class="aLink">幼儿园</a>
+                <span class="rightIcon"><i class="iconfont">&#xe61a;</i></span>
+            </li>
+            
+            <li class="menuType">
+                <a key="/primary" href="primary" class="aLink">小学</a>
+                <span class="rightIcon"><i class="iconfont">&#xe61a;</i></span>
+            </li>
+            
+            <li class="menuType">
+                <a key="/middle" href="middle" class="aLink">初中</a>
+                <span class="rightIcon"><i class="iconfont">&#xe61a;</i></span>
+            </li>
+            
+            <li class="menuType">
+                <a key="/senior" href="senior" class="aLink">高中</a>
+                <span class="rightIcon"><i class="iconfont">&#xe61a;</i></span>
+            </li>
+            
+            <li class="menuType">
+                <a key="/cooperation_exchange" href="cooperation_exchange" class="aLink">合作与交流</a>
+                <span class="rightIcon"><i class="iconfont">&#xe61a;</i></span>
+            </li>
+            
+            <li class="menuType">
+                <a key="/recruit" href="recruit" class="aLink">应聘</a>
+                <span class="rightIcon"><i class="iconfont">&#xe61a;</i></span>
+            </li>
+            
+            <li class="menuType">
+                <a key="/recruit_students" href="recruit_students" class="aLink">入学</a>
+                <span class="rightIcon"><i class="iconfont">&#xe61a;</i></span>
+            </li>
+            
+        </ul>
+        <div class="opacity"></div>
+    </div>
+</header>  <!--二级菜单-->
+ <div id="pcMenu">
+     <div class="menu-wrapper">
+         <div class="menu-list-wrapper">
+             <div class="nav-wrapper">
+                 <div class="first-menu">
+                     
+                     <ul class="first-menu-right menu-style">
+                         <li></li>
+                         <li></li>
+                     </ul>
+                     <ul class="first-menu-left menu-style">
+                         
+                         <li data-url="/about">
+                             <a href="about">关于云谷</a>
+                             
+                         </li>
+                         
+                         <li data-url="/news">
+                             <a href="news">新闻</a>
+                             
+                         </li>
+                         
+                         <li data-url="/kindergarten">
+                             <a href="kindergarten">幼儿园</a>
+                             
+                         </li>
+                         
+                         <li data-url="/primary">
+                             <a href="primary">小学</a>
+                             
+                         </li>
+                         
+                         <li data-url="/middle">
+                             <a href="middle">初中</a>
+                             
+                         </li>
+                         
+                         <li data-url="/senior">
+                             <a href="senior">高中</a>
+                             
+                         </li>
+                         
+                         <li data-url="/cooperation_exchange">
+                             <a href="cooperation_exchange">合作与交流</a>
+                             
+                         </li>
+                         
+                         <li data-url="/recruit">
+                             <a href="recruit">应聘</a>
+                             
+                         </li>
+                         
+                         <li data-url="/recruit_students">
+                             <a href="recruit_students">入学</a>
+                             
+                         </li>
+                         
+                     </ul>
+                 </div>
+             </div>
+             <div class="nav-detail-wrapper">
+                 <div class="second-menu">
+                    <div class="menu-wrapper-logo">
+                         <a class="logo-a" href="index.html">
+                             <i class="iconfont icon-logo">&#xe636;</i>
+                             
+
+                         </a>
+                    </div>
+                     <ul class="second-menu-left menu-style">
+                         
+                         <li  id="3605_f7c5_276b_d607">
+                             
+                                 <a onclick="hashFun('3605_f7c5_276b_d607')" >悦耳的精灵谷</a>
+                             
+                         </li>
+                         
+                         <li  id="8d92_4565_5e80_27d4">
+                             
+                                 <a onclick="hashFun('8d92_4565_5e80_27d4')" >谷粒画像</a>
+                             
+                         </li>
+                         
+                         <li  id="318b_c8ce_72bf_5f3b">
+                             
+                                 <a onclick="hashFun('318b_c8ce_72bf_5f3b')" >儿童观与教育观</a>
+                             
+                         </li>
+                         
+                         <li  id="2359_b9a7_f09e_c634">
+                             
+                                 <a onclick="hashFun('2359_b9a7_f09e_c634')" >课程观</a>
+                             
+                         </li>
+                         
+                         <li  id="0ba7_af9e_dcb6_729a">
+                             
+                                 <a onclick="hashFun('0ba7_af9e_dcb6_729a')" >家园共育</a>
+                             
+                         </li>
+                         
+                         <li  id="cafd_0b0d_4375_9741">
+                             
+                                 <a onclick="hashFun('cafd_0b0d_4375_9741')" >园长寄语</a>
+                             
+                         </li>
+                         
+                         <li  id="8d31_8f72_1165_e199">
+                             
+                                 <a onclick="hashFun('8d31_8f72_1165_e199')" ></a>
+                             
+                         </li>
+                         
+                     </ul>
+                 </div>
+             </div>
+         </div>
+     </div>
+ </div>
+
+<div id="mobileMenu">
+    <div class="menu-wrapper mobile-menu-wrapper">
+        <div class="menu-list-wrapper">
+            <div class="nav-wrapper">
+                <div class="mobile-news-menu" id="second-mobile-news-menu">
+                    <span class="list"><i class="iconfont">&#xe61e;</i></span>
+                    <div class="logo"><a href="index.html"><i class="iconfont">&#xe636;</i></a></div>
+                    <div class="userAndLang">
+                        <span class="userMsg">
+                            <span class="userImgBox">
+                                <span class="userImg"></span>
+                                <span class="userImgdefault"></span>
+                            </span>
+                
+                            
+                            <ul class="selectTips">
+                                <li class="accountSet">账号设置</li>
+                                <li class="admissionApply">入学申请</li>
+                                <li class="application">应聘信息</li>
+                                <li class="exit">退出</li>
+                            </ul>
+                        </span>
+                        <span class="person"><i class="iconfont">&#xe617;</i></span>
+                        <span class="changeLangunge" id="changLanguageButtonMobile"><i class="iconfont iconInnerText">&#xe625;</i></span>
+                    </div>
+                    <ul class="sliderMenu">
+                        
+                         <li class="menuType">
+                            <a key="/about" href="about" class="aLink">关于云谷</a>
+                            <span class="rightIcon"><i class="iconfont">&#xe61a;</i></span>
+                         </li>
+                        
+                         <li class="menuType">
+                            <a key="/news" href="news" class="aLink">新闻</a>
+                            <span class="rightIcon"><i class="iconfont">&#xe61a;</i></span>
+                         </li>
+                        
+                         <li class="menuType">
+                            <a key="/kindergarten" href="kindergarten" class="aLink">幼儿园</a>
+                            <span class="rightIcon"><i class="iconfont">&#xe61a;</i></span>
+                         </li>
+                        
+                         <li class="menuType">
+                            <a key="/primary" href="primary" class="aLink">小学</a>
+                            <span class="rightIcon"><i class="iconfont">&#xe61a;</i></span>
+                         </li>
+                        
+                         <li class="menuType">
+                            <a key="/middle" href="middle" class="aLink">初中</a>
+                            <span class="rightIcon"><i class="iconfont">&#xe61a;</i></span>
+                         </li>
+                        
+                         <li class="menuType">
+                            <a key="/senior" href="senior" class="aLink">高中</a>
+                            <span class="rightIcon"><i class="iconfont">&#xe61a;</i></span>
+                         </li>
+                        
+                         <li class="menuType">
+                            <a key="/cooperation_exchange" href="cooperation_exchange" class="aLink">合作与交流</a>
+                            <span class="rightIcon"><i class="iconfont">&#xe61a;</i></span>
+                         </li>
+                        
+                         <li class="menuType">
+                            <a key="/recruit" href="recruit" class="aLink">应聘</a>
+                            <span class="rightIcon"><i class="iconfont">&#xe61a;</i></span>
+                         </li>
+                        
+                         <li class="menuType">
+                            <a key="/recruit_students" href="recruit_students" class="aLink">入学</a>
+                            <span class="rightIcon"><i class="iconfont">&#xe61a;</i></span>
+                         </li>
+                        
+                    </ul>
+                    <div class="opacity"></div>
+                </div> 
+            </div>
+            <div class="nav-detail-wrapper">
+                <div class="second-menu-mobile">
+                    <span class="mainTips">
+                        <span class="mainTitle"><a>悦耳的精灵谷</a></span>
+                        <span class="mainIcon"><i class="iconfont">&#xe634;</i></span>
+                    </span>
+                </div>
+                <ul class="secondSlideMenu">
+                    
+                    
+                       <span></span>
+                    
+                    
+                    
+                        <li class="secondListTip">
+                            
+                                <a onclick="hashFun('8d92_4565_5e80_27d4')">谷粒画像</a>
+                            
+                        </li>
+                    
+                    
+                    
+                        <li class="secondListTip">
+                            
+                                <a onclick="hashFun('318b_c8ce_72bf_5f3b')">儿童观与教育观</a>
+                            
+                        </li>
+                    
+                    
+                    
+                        <li class="secondListTip">
+                            
+                                <a onclick="hashFun('2359_b9a7_f09e_c634')">课程观</a>
+                            
+                        </li>
+                    
+                    
+                    
+                        <li class="secondListTip">
+                            
+                                <a onclick="hashFun('0ba7_af9e_dcb6_729a')">家园共育</a>
+                            
+                        </li>
+                    
+                    
+                    
+                        <li class="secondListTip">
+                            
+                                <a onclick="hashFun('cafd_0b0d_4375_9741')">园长寄语</a>
+                            
+                        </li>
+                    
+                    
+                    
+                        <li class="secondListTip">
+                            
+                                <a onclick="hashFun('8d31_8f72_1165_e199')"></a>
+                            
+                        </li>
+                    
+                    
+                </ul>
+                
+            </div>
+        </div>
+    </div>
+</div> 
+    
+
+    
+
+    <!-- 将来页面要往这里填充具体的模板内容 -->
+    <div class="allModules">
+       
+    <!-- 填充main部分的代码内容 -->
+    <!--此处模板template_id:46--><!-- 编写 HTML 代码 -->
+<div class="recruitSwipe">
+    <div class="swiper-container swiper-container-banner">
+        <div class="swiper-wrapper">
+            
+            
+            
+            <div class="swiper-slide">
+              <div class="voice"><i class="iconfont">&#xe694;</i></div>
+                <div class="cover"></div>
+                <div class="getVedio">
+                    <video id="video_49ce_2ab9d1" src="https://yungu-xiaozhao.oss-cn-hangzhou.aliyuncs.com/yungu-website/8204560153622653%E6%B5%8B%E8%AF%95%20%E5%B9%BC%E5%84%BF%E5%9B%AD.mp4" class="getShow"
+                         preload="auto" playsinline muted webkit-playsinline="true" >
+                        <source src="https://yungu-xiaozhao.oss-cn-hangzhou.aliyuncs.com/yungu-website/8204560153622653%E6%B5%8B%E8%AF%95%20%E5%B9%BC%E5%84%BF%E5%9B%AD.mp4" type="video/mp4" />
+                    </video>
+                  
+                  <img src="https://yungu-public.oss-cn-hangzhou.aliyuncs.com/yungu-website/298776728640300683%E8%8B%B1%E6%96%87%E8%B0%B7%E4%B8%BB%E5%AF%84%E8%AF%AD%E5%B7%A6%E4%BE%A7%E7%85%A7%E7%89%87.jpg" alt="" class="mobilePosterImg">
+                    <i class="iconfont control-button pause-button">&#xe606;</i>
+                </div>
+                <div class="schoolIntroduce">
+                    <p class="schoolName">精灵谷</p>
+                    <p class="description">下滑查看更多</p>
+                    <div class="checkAddress">
+                        <span class="vedio  blue-button">播放视频</span>
+                        <a class="knowmore btn white-button" target=_self
+                            href="kindergarten"></a>
+                    </div>
+                </div>
+            </div>
+            
+            
+            
+        </div>
+        <!-- 如果需要分页器 -->
+        
+        <div></div>
+        
+
+
+    </div>
+    <span class="bannerColor"></span>
+    <div class="bannerCover">
+        <img src="kindergarten" alt="" class="coverImg">
+        <img src="kindergarten" alt="" class="coverImgMobile">
+    </div>
+</div>
+<script id="test_49ce_2ab9d1" type="application/json">{"txtImgVideo":[{"inputNumber":2,"newWindowState":false,"chineseText":["精灵谷","下滑查看更多"],"englishText":["Yungu Kindergarten","Read More Below"],"chineseUrl":"","englishUrl":"","imageOrVideo":[{"uid":"rc-upload-1566986994062-9","name":"测试 幼儿园.mp4","status":"done","type":"video/mp4","size":42514551,"src":"https://yungu-xiaozhao.oss-cn-hangzhou.aliyuncs.com/yungu-website/8204560153622653%E6%B5%8B%E8%AF%95%20%E5%B9%BC%E5%84%BF%E5%9B%AD.mp4","sourceType":1,"uploadType":2},{"uid":"rc-upload-1572334766360-19","name":"3英文谷主寄语左侧照片.jpg","status":"done","type":"image/jpeg","size":464822,"src":"https://yungu-public.oss-cn-hangzhou.aliyuncs.com/yungu-website/298776728640300683%E8%8B%B1%E6%96%87%E8%B0%B7%E4%B8%BB%E5%AF%84%E8%AF%AD%E5%B7%A6%E4%BE%A7%E7%85%A7%E7%89%87.jpg","sourceType":1,"uploadType":1}],"text":["精灵谷","下滑查看更多"],"url":""}],"templateBuiltInParamsList":[{"type":"ARRAY","classification":4,"name":"txtImgVideo"}]}</script><!--此处模板template_id:60--><!-- 编写 HTML 代码 -->
+<div class="grainPortrait" data-component="8d92_4565_5e80_27d4">
+    <div class="bkgImg"><img src="https://yungu-xiaozhao.oss-cn-hangzhou.aliyuncs.com/yungu-website/70706384497205210%E8%B0%B7%E7%B2%92%E7%94%BB%E5%83%8F%E8%83%8C%E6%99%AF%E5%9B%BE%E6%9C%80%E6%96%B0.png" alt=""></div>
+    <div class="grainCenter">
+      	<div class="mainTitle">谷粒画像</div>
+        <div class="text">内心温暖，眼神明亮的精灵</div>
+        <div class="imgList">
+          
+            <div class="imgTips"><img src="https://yungu-public.oss-cn-hangzhou.aliyuncs.com/yungu-website/23132258796403236320290722102288809%E6%88%91%E4%BB%AC%E7%9A%84%E5%AE%B6%E5%B0%8F%E5%9B%BE.jpeg?x-oss-process=image/resize,w_500/auto-orient,1" alt=""></div>
+          
+            <div class="imgTips"><img src="https://yungu-public.oss-cn-hangzhou.aliyuncs.com/yungu-website/2468032123243826479139378242231200%E5%A4%87%E7%94%A8%E7%85%A7%E7%89%870.jpg?x-oss-process=image/resize,w_500/auto-orient,1" alt=""></div>
+          
+            <div class="imgTips"><img src="https://yungu-public.oss-cn-hangzhou.aliyuncs.com/yungu-website/59167172108212450460194226074013805%E6%84%BF%E6%99%AF%E5%8F%B3%E4%BE%A7%E5%B0%8F%E5%9B%BE.jpeg?x-oss-process=image/resize,w_500/auto-orient,1" alt=""></div>
+          
+        </div>
+    </div>
+</div><!--此处模板template_id:30--><!--左文字右图-->
+<div class="yg-right-picture" data-component="318b_c8ce_72bf_5f3b">
+  
+    <div class="yg-right-container">
+      
+        <div class="yg-right-picture-img"  style="background:url(https://yungu-xiaozhao.oss-cn-hangzhou.aliyuncs.com/yungu-website/89239585095580430%E7%8E%A9%E8%80%8D2.jpeg?x-oss-process=image/resize,m_lfit,w_1240/auto-orient,1) no-repeat center center/cover">
+          <span class="colorCoverRight"></span>
+            <div class="yg-right-picture-cover">
+                <img src="https://yungu-xiaozhao.oss-cn-hangzhou.aliyuncs.com/yungu-website/870283187308935803_02.png"/>
+            </div>
+        </div>
+      <div class="yg-right-picture-bkg">
+         <div class="yg-right-picture-text">
+              <h3 class="yg-right-picture-title">儿童观与教育观</h3>
+              <p class="yg-right-picture-description">我们相信：对儿童的理解和看见是一切教育的开始，建立亲密而平等的关系是教和育发生的前提。
+
+我们认为：每一位孩子都是完整的、独一无二的、有能力的学习者。
+
+在云谷，让儿童是（像）儿童，葆有灵性与天性！
+</p>
+          
+                <a class="yg-rigth-picture-button blue-button"  target=_blank href="sub/kindergarten/education_view">了解详情</a>
+             
+              
+        </div>
+      </div>
+    </div>
+</div><!--此处模板template_id:31--><div class="yg-left-picture" data-component="2359_b9a7_f09e_c634">
+    <div class="yg-left-container">
+        <div class="yg-left-picture-img" style="background:url(https://yungu-xiaozhao.oss-cn-hangzhou.aliyuncs.com/yungu-website/581247645054290201%E5%85%B3%E4%BA%8E%E4%BA%91%E8%B0%B7.JPG?x-oss-process=image/resize,m_lfit,w_1240/auto-orient,1) no-repeat center center/cover">
+          <span class="colorCover"></span>
+            <div class="yg-left-picture-cover">
+                <img src="https://yungu-xiaozhao.oss-cn-hangzhou.aliyuncs.com/yungu-website/442229862164146504_01.png"/>
+            </div>
+        </div>
+      <div class="yg-left-picture-bkg">
+<!--         <img src="https://yungu-xiaozhao.oss-cn-hangzhou.aliyuncs.com/yungu-website/722072189730005902_02.png"/> -->
+        <div class="yg-left-picture-text">
+            <h3 class="yg-left-picture-title">课程观</h3>
+            <p class="yg-left-picture-description">我们认为平淡无奇、反复真实的生活常态都是教和育的练习场，与孩子来说都是学习和发展的事件，因此我们将实践“生活启智课程”。</p>
+          
+         
+                <a target=_blank href="sub/kindergarten/curriculum" class="yg-left-picture-button blue-button">了解详情</a>
+             
+        </div>
+      </div> 
+    </div>
+</div>
+<!--此处模板template_id:25--><div class="yg-about-contain" data-component="0ba7_af9e_dcb6_729a" >
+    <div class="yg-about-main" style="background: url(https://yungu-xiaozhao.oss-cn-hangzhou.aliyuncs.com/yungu-website/62179207428052760%E7%88%B8%E7%88%B8%E5%A6%88%E5%A6%881.jpeg?x-oss-process=image/resize,m_lfit,w_1240/auto-orient,1) no-repeat center center/cover ">
+        <img src="https://yungu-xiaozhao.oss-cn-hangzhou.aliyuncs.com/yungu-website/6931168029826394014.png" class="yg-about-cover"/>
+      <span class="colorCover"></span>
+        <div class="yg-about-word">
+            <div class="yg-about-text">
+                <h3 class="yg-about-title">家园共育</h3>
+                <p class="yg-about-description">对家长，这是一个看见精灵、蕴育能量的山谷</p>
+              
+             
+                <a class="yg-about-oper blue-button" target=_blank href="sub/kindergarten/home_and_school">了解详情</a>
+             
+            </div>
+        </div>
+    </div>
+</div><!--此处模板template_id:64--><!-- 编写 HTML 代码 -->
+<div class="onlyImgAndRemarks"  data-component="cafd_0b0d_4375_9741">
+    <div class="content">
+        <div class="img">
+            <img src="https://yungu-xiaozhao.oss-cn-hangzhou.aliyuncs.com/yungu-website/95318590873713380WechatIMG772.jpeg?x-oss-process=image/resize,m_lfit,w_300/auto-orient,1" alt="">
+        </div>
+        <p class="mainTitle">园长寄语</p>
+        <p class="subtitle">我所捍卫的“儿童气息”</p>
+        <div class="remarksSlick">
+            <div class="swiper-wrapper">
+              
+                <div class="slickCard swiper-slide">
+                    <div class="subContent">
+                        <p class="firstText">园长蔡伟玲</p>
+                        <span class="border"></span>
+                        <div class="secondText">
+                            <span class="describe">
+                                <span class="text">看见儿童，这便是我在云谷所追求和捍卫的理念。</span>
+                                <a class="learnMore blue-button"  href="news/detail?id=48" target=_self>了解详情</a>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+               
+            </div>
+
+          
+          <div></div>
+          
+        </div>
+    </div>
+</div><!--此处模板template_id:32--> <div class="yg-know-more" data-component="8d31_8f72_1165_e199">
+   
+<!--     <div class="yg-learn-more-contain">
+        <h3 class="yg-learn-more-title"></h3>
+      <p class="yg-learn-more-button">
+            <a style="background: rgba(108,197,66,1)" class="register" href="https://oslogin.daily.yungu-inc.org/api/os/cas/osLogin#/register"></a>
+        </p>
+        <p class="yg-learn-more-tips"></p>
+        
+    </div> -->
+    <div class="yg-footer">
+      
+        <img src="kindergarten" class="yg-footer-cover"/>
+      <img src="kindergarten" class="yg-footer-cover-mobile"/>
+                  <div class="wechat"><img src="https://yungu-xiaozhao.oss-cn-hangzhou.aliyuncs.com/yungu-website/85810832712537870IMG_0466.JPG" alt=""></div>
+
+        <div class="yg-footer-text">
+            <div class="yg-footer-text-left">
+<!--                 <img src=""/> -->
+<!--               <span class="yg-footer-logo"><i class="iconfont">&#xe630;</i></span> -->
+              
+              <span class="yg-footer-logo"><img src='https://yungu-xiaozhao.oss-cn-hangzhou.aliyuncs.com/yungu-website/19347237498293100logo-%E7%99%BD01.png' /></span>
+            </div>
+            <div class="yg-footer-text-right">
+                <div class="yg-footer-text-right-top">
+                  <div class="friendlyLink">
+                    <a class="warm-link-title yg-footer-white">友情链接</a>
+                    <p class="warm-link-detail yg-footer-gray">
+                        <a href="http://www.hzedu.gov.cn/sites/main/default.aspx " class="educationBureau">杭州市教育局</a>
+                        <a  href="http://www.hzpolice.gov.cn" class="rightBorder municipal">杭州市公安局</a>
+                      <a  href="http://hrss.hangzhou.gov.cn" class="social">杭州市人力资源和社会保障局</a>
+                    </p>
+                  </div>
+                  <div class="contactUs">
+                    <span class="connect-us-title yg-footer-white lianxiwomen"><a href='kindergarten'>联系我们</a></span>
+                    <p class="connect-us-tips">
+                    	
+                        <span class="connect-us-detail connect-us-detail-middle">
+                                <i class="iconfont yg-footer-icon yg-footer-white">&#xe613;</i>
+                                <i class="yg-footer-gray contactUs-content">0571-88376666</i>
+                        </span>
+                          <span class="connect-us-detail connectEmail">
+                              <i class="iconfont yg-footer-icon yg-footer-white">&#xe615;</i>
+                              <i class="yg-footer-gray contactUs-content">info@yungu.org</i>
+                          </span>
+                      <span class="connect-us-detail connectCoopration">
+<!--                           <i class="iconfont yg-footer-icon yg-footer-white">&#xe608;</i> -->
+                          <i class="iconfont yg-footer-icon yg-footer-white cooperation">品牌合作</i>
+                          <i class="yg-footer-gray contactUs-content">branding@yungu.org</i>
+                        </span>
+                    </p>
+                    
+                 </div>
+                </div>
+                <div class="yg-footer-text-right-bottom">
+<!--                     <p class="yg-copy-right"></p> -->
+                  <div class="yg-copy-icon">
+<!--                     <img src="http://yungu-xiaozhao.oss-cn-hangzhou.aliyuncs.com/yungu-website/79088764285555310footer-icon.png"/> -->
+                      <div class="iconList">
+                            <a class="wechatIcon"><i class="iconfont yg-footer-white">&#xe633;</i></a>
+                            <a href="https://weibo.com/u/6146926517"><i class="iconfont yg-footer-white">&#xe631;</i></a>
+                            <a href="https://www.linkedin.com/company/yungu/"><i class="iconfont yg-footer-white">&#xe632;</i></a>
+                      </div>
+                    </div>
+                  	<div class="yg-copy-right">
+                        <span class="yg-footer-left-tips">
+<!--                             <img src="https://yungu-xiaozhao.oss-cn-hangzhou.aliyuncs.com/yungu-website/51666009624875550%E8%AD%A6%E5%BE%BD.png" alt=""/> -->
+                            <span>浙公网安备 330100602009823号</span>
+                        </span>
+                        <span class="yg-footer-left-tips yg-border">浙ICP备17004649号</span>
+                        <span class="yg-footer-left-tips"> © 2016-现在yungu.org版权所有</span>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+    </div>
+
+     
+
+    <!-- 公共的js  -->
+    <script src="public/lib/js/jquery.3.1.1.min.js"></script>
+    <script src="public/lib/js/swiper.min.js"></script>
+    <script src="public/lib/js/secondHeader.js"></script>
+    <script src="public/js/mockData.js"></script>
+    
+    <!-- 填充script外链内容 -->
+    <script src="kindergarten"></script>
+    <!-- 合并当前页面的js -->
+    <script>
+        window.onload = function(){
+            (function(){
+                $('loadBg').fadeOut()
+                setTimeout( function(){
+                    $('loadIcon').hide()
+                    $('#loading').fadeOut()
+                
+$(function () {
+	
+   if (document.cookie && document.cookie.indexOf("en") != -1) {
+      $(".kindGarten .swiper-container-banner .swiper-wrapper .swiper-slide .schoolIntroduce .schoolName ").css('letter-spacing', '0px')
+   }
+
+   
+   var contentConfigure = document.getElementById("test_49ce_2ab9d1") && JSON.parse(document.getElementById("test_49ce_2ab9d1").innerHTML);
+   let isLoop = false
+   if (contentConfigure && contentConfigure.txtImgVideo && contentConfigure.txtImgVideo.length > 1) {
+      isLoop = true
+   } else {
+      isLoop = false
+   }
+
+   
+   var newSwiper = new Swiper('.recruitSwipe .swiper-container-banner', {
+      loop: isLoop, 
+      autoplay: {
+         delay: 2000
+      },
+      delay: 0,
+      pagination: {
+         el: '.recruitSwipe .swiper-pagination',
+         clickable: true,
+      },
+   })
+
+   
+   if (contentConfigure && contentConfigure.txtImgVideo && contentConfigure.txtImgVideo.length == 1 && contentConfigure.txtImgVideo[0].imageOrVideo[0].type == "video/mp4") {
+
+      $(".recruitSwipe .swiper-slide-active ").find('video').attr('loop', 'loop')
+
+   } else {
+
+      $(".recruitSwipe .swiper-slide-active ").find('video').removeAttr('loop')
+   }
+
+   
+   
+   
+   
+   
+   
+   
+
+   var mo = function (e) {
+      e.preventDefault()
+   };
+   
+   var u = navigator.userAgent;
+   var isVoice = false;
+
+   
+   if ($(window).width() <= '1024') {
+		$(".recruitSwipe .swiper-container-banner .swiper-wrapper .swiper-slide .voice ").hide()
+      
+      $(".recruitSwipe .swiper-container-banner .swiper-wrapper .swiper-slide .schoolIntroduce .checkAddress .vedio ").on('click', function () {
+         document.body.style.overflow = 'hidden';
+         document.addEventListener("touchmove", mo, false); 
+         var activeVideo = $(".recruitSwipe .swiper-container-banner .swiper-wrapper .swiper-slide-active .getShow ");
+         
+         if (u.indexOf('Android') > -1 || u.indexOf('Linux') > -1) {
+            activeVideo[0].play()
+         } else {
+            $(".recruitSwipe .swiper-container-banner .swiper-wrapper .swiper-slide .mobilePosterImg ").hide()
+            activeVideo.show()
+            activeVideo.trigger('play')
+            activeVideo.attr('controls', 'controls')
+            activeVideo.parents('.swiper-wrapper').css('display', 'inline')
+            activeVideo.parents('.swiper-container').css('z-index', 'unset')
+            $(".recruitSwipe .swiper-container-banner .swiper-wrapper .swiper-slide .pause-button ").show()
+         }
+      })
+
+      
+      $(".recruitSwipe .swiper-container-banner .swiper-wrapper .swiper-slide .pause-button ").on('click', function () {
+         document.body.style.overflow = ''; 
+         document.removeEventListener("touchmove", mo, false);
+         var activeVideo = $(".recruitSwipe .swiper-container-banner .swiper-wrapper .swiper-slide .getShow ");
+         activeVideo.hide()
+         activeVideo.trigger('pause');
+         activeVideo.parents('.swiper-wrapper').css('display', 'flex')
+         activeVideo.parents('.swiper-container').css('z-index', '1')
+         $(".recruitSwipe .swiper-container-banner .swiper-wrapper .swiper-slide .pause-button ").hide()
+         $(".recruitSwipe .swiper-container-banner .swiper-wrapper .swiper-slide .mobilePosterImg ").show()
+      })
+   } else { 
+     $(".recruitSwipe .swiper-container-banner .swiper-wrapper .swiper-slide .voice ").show()
+      $("video ").css('object-fit', 'cover')
+      var currentSliderNews = $(".recruitSwipe .swiper-slide-active ").find('video'); 
+      $(".recruitSwipe .swiper-container-banner .swiper-wrapper .swiper-slide .voice ").on('click', function () {
+         isVoice = !isVoice
+         console.log(isVoice,111112)
+         var controlVideo = document.getElementById("video_49ce_2ab9d1");
+         if (isVoice) {
+            $(this).parents('.swiper-slide').find('video').get(0).muted = false
+             $(this).parents('.swiper-slide').find('video').get(0).volume = 0.3
+           $(".recruitSwipe .swiper-container-banner .swiper-wrapper .swiper-slide .voice ").html('<i class="iconfont">&#xe740;</i>')
+         }else{
+         	controlVideo.muted = true;
+           $(".recruitSwipe .swiper-container-banner .swiper-wrapper .swiper-slide .voice ").html('<i class="iconfont">&#xe694;</i>')
+         }
+      })
+      
+      if ($(".recruitSwipe .swiper-slide-active ").find('video').length == 1) {
+         currentSliderNews.trigger('play')
+         newSwiper.autoplay.stop();
+         currentSliderNews.on('ended', function () {
+            currentSliderNews.trigger('pause');
+            newSwiper.autoplay.start();
+         })
+      }
+      
+      newSwiper.on('slideChangeTransitionEnd', function () {
+         isVoice = false;
+          console.log(1111)
+         $(".recruitSwipe .swiper-container-banner .swiper-wrapper .swiper-slide .voice ").html('<i class="iconfont">&#xe694;</i>')
+
+         currentSlider = $(".recruitSwipe .swiper-slide-active ").find('video');
+         if (currentSlider.length == 1) {
+            currentSlider.trigger('play')
+            newSwiper.autoplay.stop();
+            currentSlider.on('ended', function () {
+               newSwiper.autoplay.start();
+            })
+         } else {
+            newSwiper.autoplay.start();
+         }
+      })
+
+   }
+
+})
+$(function(){
+  if (document.cookie && document.cookie.indexOf("en") != -1) {
+  	$(".kindGarten .grainPortrait .grainCenter .mainTitle,.kindGarten .grainPortrait .grainCenter .text ").css('letter-spacing','0px')
+  }
+  	var pathName = window.location.pathname;
+	if (pathName.indexOf("kindergarten") != -1) {
+        $(".grainPortrait .bkgImg img ").attr('src','https://yungu-xiaozhao.oss-cn-hangzhou.aliyuncs.com/yungu-website/63050549573107940%E5%B9%BC%E5%84%BF%E5%9B%AD%E8%B0%B7%E7%B2%92%E7%94%BB%E5%83%8F%E8%83%8C%E6%99%AF%E5%88%87%E5%9B%BE.png')
+    }else{
+    	$(".grainPortrait .bkgImg img ").attr('src','https://yungu-xiaozhao.oss-cn-hangzhou.aliyuncs.com/yungu-website/70706384497205210%E8%B0%B7%E7%B2%92%E7%94%BB%E5%83%8F%E8%83%8C%E6%99%AF%E5%9B%BE%E6%9C%80%E6%96%B0.png')
+    }
+})
+$(function(){
+   if (document.cookie && document.cookie.indexOf("en") != -1) {
+  	$(".kindGarten .yg-right-container .yg-right-picture-text .yg-right-picture-title ").css('letter-spacing','0px')
+  }
+  var pathName = window.location.pathname;
+    if (pathName == "/kindergarten") {
+        $(".yg-right-picture .yg-right-picture-img .yg-right-picture-cover img ").attr('src',"https://yungu-xiaozhao.oss-cn-hangzhou.aliyuncs.com/yungu-website/26234404639350070image2.png")
+    }
+  else{
+        $(".yg-right-picture .yg-right-picture-img .yg-right-picture-cover img ").attr('src',"https://yungu-xiaozhao.oss-cn-hangzhou.aliyuncs.com/yungu-website/870283187308935803_02.png") 
+    }
+  
+})
+$(function(){
+  if (document.cookie && document.cookie.indexOf("en") != -1) {
+  	$(".kindGarten .yg-left-container .yg-left-picture-text .yg-left-picture-title ").css('letter-spacing','0px')
+  }
+  var colorCover = $(".yg-left-picture .yg-left-container .colorCover "),
+    pathName = window.location.pathname;
+    if (pathName == "/kindergarten") {
+        $(".yg-left-picture .yg-left-picture-img .yg-left-picture-cover img ").attr('src',"https://yungu-xiaozhao.oss-cn-hangzhou.aliyuncs.com/yungu-website/75293664480153470image1.png")
+    }
+  else{
+        $(".yg-left-picture .yg-left-picture-img .yg-left-picture-cover img ").attr('src',"https://yungu-xiaozhao.oss-cn-hangzhou.aliyuncs.com/yungu-website/442229862164146504_01.png") 
+    }
+})
+$(function(){
+  if (document.cookie && document.cookie.indexOf("en") != -1) {
+  	$(".kindGarten .yg-about-contain .yg-about-main .yg-about-title ").css('letter-spacing','0px')
+  }
+  var colorCover = $(".yg-about-contain .yg-about-main .colorCover "),
+    pathName = window.location.pathname;
+    if (pathName == "/kindergarten") {
+        $(".yg-about-contain .yg-about-main .yg-about-cover ").attr('src',"https://yungu-xiaozhao.oss-cn-hangzhou.aliyuncs.com/yungu-website/92236549526747600image3.png") 
+    }
+  else{
+        $(".yg-about-contain .yg-about-main .yg-about-cover ").attr('src',"https://yungu-xiaozhao.oss-cn-hangzhou.aliyuncs.com/yungu-website/6931168029826394014.png") 
+    }
+})
+$(function(){
+   if (document.cookie && document.cookie.indexOf("en") != -1) {
+  	$(".kindGarten .onlyImgAndRemarks .content .mainTitle ").css('letter-spacing','0px')
+  }
+   if ($(window).width() > '768')  {
+   	var newRemarksSwiper = new Swiper('.onlyImgAndRemarks .remarksSlick' , {
+        slidesPerView :2,
+        
+        direction: 'horizontal',
+        centerInsufficientSlides:true,
+        autoHeight: true,
+      	
+        navigation: {
+            prevEl: '.onlyImgAndRemarks .remarksSlick .buttonPrev',
+            nextEl: '.onlyImgAndRemarks .remarksSlick .buttonNext',
+        },
+    })
+   }else{
+   	var newRemarksSwiper = new Swiper('.onlyImgAndRemarks .remarksSlick' , {
+        slidesPerView :1,
+        
+        direction: 'horizontal',
+        centerInsufficientSlides:true,
+        autoHeight: true,
+      	loop:true
+    })
+   }
+  
+  $(".onlyImgAndRemarks .remarksSlick ").css('opacity',1)
+    
+})
+$(function(){
+	 $(".yg-footer-text-right-bottom .yg-copy-icon .iconList .wechatIcon ").on('mouseover',function(){
+    	$(".yg-know-more .wechat ").show()
+    })
+    $(".yg-footer-text-right-bottom .yg-copy-icon .iconList .wechatIcon ").on('mouseout',function(){
+    	$(".yg-know-more .wechat ").hide()
+    })
+  
+  if (document.cookie && document.cookie.indexOf("lang=en") >= 0 ) {
+    console.log('en')
+  	$(".yg-know-more .friendlyLink .yg-footer-white ").html('Links')
+    $(".yg-know-more .friendlyLink .educationBureau ").html('Hangzhou  Education Bureau')
+     $(".yg-know-more .friendlyLink .municipal ").html('Hangzhou Municipal Public Security Bureau')
+    $(".yg-know-more .friendlyLink .social ").html('Hangzhou Human Resources and Social Security Bureau')
+    $(".yg-know-more .contactUs .connect-us-title ").html('Contact us')
+    $(".yg-know-more .contactUs .cooperation ").html('Cooperation')
+  }else{
+  	$(".yg-know-more .friendlyLink .yg-footer-white ").html('友情链接')
+    $(".yg-know-more .friendlyLink .educationBureau ").html('杭州教育局')
+     $(".yg-know-more .friendlyLink .municipal ").html('杭州公安局')
+    $(".yg-know-more .friendlyLink .social ").html('杭州人力资源和社会保障局')
+    $(".yg-know-more .contactUs .connect-us-title ").html('联系我们')
+    $(".yg-know-more .contactUs .cooperation ").html('品牌合作')
+  }
+})
+                },800)
+            })();
+          
+        }
+    </script>
+
+    <!-- 统计代码 -->
+    <div style="display:none;">
+      <script
+        type="text/javascript"
+        src="https://s95.cnzz.com/z_stat.php?id=1261257612&web_id=1261257612"
+      ></script>
+      <script>
+        window.sendCZC = function(args) {
+          window._czc && args && window._czc.push(args);
+        };
+
+      </script>
+    </div>
+  </body>
+</html>
