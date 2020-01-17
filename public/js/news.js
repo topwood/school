@@ -35,7 +35,7 @@ function getnewsDate(arr) {
         }
 
         if (arr[i].uname == null) {
-            uname = '云谷学校'
+            uname = '朗阁学校'
         }else{
             uname = arr[i].uname
         }
