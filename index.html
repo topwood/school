@@ -15,7 +15,7 @@
     />
     <link rel="stylesheet" type="text/css" href="public/lib/css/animate.css" />
     <link rel="stylesheet" type="text/css" href="public/css/robot.css" />
-    
+
     <title>朗阁主页</title>
     <!-- 引入css外链 -->
     <link rel="stylesheet" type="text/css" href= "public/lib/css/slick.css" /><link rel="stylesheet" type="text/css" href= "public/lib/css/fullpage.min.css" />
@@ -47,7 +47,7 @@
     position: relative;
     z-index: 12;
     width: 45vw;
-    
+
     margin-top: 25vh;
 }
 .yg-banner .banner-text .row{
@@ -67,7 +67,7 @@
     opacity: 0;
   	margin-bottom:8px;
   	font-family: PingFangSC-Semibold, sans-serif;
-     
+
 }
 .yg-banner .banner-text .banner-description {
     width: 100%;
@@ -79,7 +79,7 @@
     position: relative;
     bottom: 7vh;
   	opacity: 0;
-     
+
 }
 .yg-banner .banner-text .common-button {
     cursor: pointer;
@@ -99,12 +99,23 @@
 }
 
 .yg-banner .banner-text .blue-button {
-    background: #0258bf;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
     color: #fff;
+    background: #0258bf;
+    display: inline-block;
+    line-height: 38px;
+    width: 110px;
+    text-align: center;
+    transition: background .4s ease;
+    -webkit-transition: background .4s ease;
 }
 .yg-banner .banner-text .blue-button:hover{
 	background:#0577ff;
-    
+
 }
 .yg-banner .banner-text .white-button {
     background: #fff;
@@ -193,7 +204,7 @@
 }
 
 .yg-banner .banner-text .common-button {
-   
+
     bottom: 0px;
     display: block;
     width: 1.3rem;
@@ -212,7 +223,7 @@
 
 .banner-wrapper-text .banner-wrapper-description {
     margin: .1rem 0 .4rem;
-  	
+
 }
 .back-cover{
 	/*height:1.7rem;*/
@@ -239,32 +250,32 @@
   }
  .slick-dots{
     bottom:1.3rem;
-   
+
   	/*position: sticky;
-   
+
     overflow: hidden;
     display:flex;
     display: -webkit-flex;
     justify-content: center;*/
   }
    /*.slick-dots li{
-  	display:block;                
+  	display:block;
   }*/
 }
 </style>
 
     <script>
-      var OSLOGIN_HOST = "https://yunguid.yungu.org";
+      var OSLOGIN_HOST = "https://yunguid.xx.org";
     </script>
   </head>
 
   <body>
 
   <div id="loading">
-    <div class="loadBg"></div>  
+    <div class="loadBg"></div>
     <div class="loadIcon"></div>
   </div>
-    
+
     <!--[if lt IE 10]>
     <script>
         var href = window.location.href;
@@ -285,30 +296,30 @@
                 </a>
             </div>
             <ul class="header-menu menu-list">
-                
+
                 <li><a key="/about" href="about">关于朗阁</a></li>
-                
-                <li><a key="/kindergarten" href="kindergarten">幼儿园</a></li>
-                
+
+
+
                 <li><a key="/primary" href="primary">小学</a></li>
-                
+
                 <li><a key="/middle" href="middle">初中</a></li>
-                
+
                 <li><a key="/senior" href="senior">高中</a></li>
-                
+
                 <li><a key="/cooperation_exchange" href="cooperation_exchange">合作与交流</a></li>
-                
+
                 <li><a key="/recruit" href="recruit">应聘</a></li>
-                
+
                 <li><a key="/recruit_students" href="recruit_students">入学</a></li>
-                
+
                 <li><a key="/excellent_course" href="excellent_course">精品课程</a></li>
 
                 <li><a key="/training_camp" href="training_camp">训练营</a></li>
 
             </ul>
             <ul class="header-menu header-right">
-                
+
 
 
                 <li class="userMsg">
@@ -367,42 +378,39 @@
                     class="iconfont iconInnerText">&#xe625;</i></span>
         </div>
         <ul class="sliderMenu">
-            
+
             <li class="menuType">
                 <a key="/about" href="about" class="aLink">关于朗阁</a>
                 <span class="rightIcon"><i class="iconfont">&#xe61a;</i></span>
             </li>
+
             
-            <li class="menuType">
-                <a key="/kindergarten" href="kindergarten" class="aLink">幼儿园</a>
-                <span class="rightIcon"><i class="iconfont">&#xe61a;</i></span>
-            </li>
-            
+
             <li class="menuType">
                 <a key="/primary" href="primary" class="aLink">小学</a>
                 <span class="rightIcon"><i class="iconfont">&#xe61a;</i></span>
             </li>
-            
+
             <li class="menuType">
                 <a key="/middle" href="middle" class="aLink">初中</a>
                 <span class="rightIcon"><i class="iconfont">&#xe61a;</i></span>
             </li>
-            
+
             <li class="menuType">
                 <a key="/senior" href="senior" class="aLink">高中</a>
                 <span class="rightIcon"><i class="iconfont">&#xe61a;</i></span>
             </li>
-            
+
             <li class="menuType">
                 <a key="/cooperation_exchange" href="cooperation_exchange" class="aLink">合作与交流</a>
                 <span class="rightIcon"><i class="iconfont">&#xe61a;</i></span>
             </li>
-            
+
             <li class="menuType">
                 <a key="/recruit" href="recruit" class="aLink">应聘</a>
                 <span class="rightIcon"><i class="iconfont">&#xe61a;</i></span>
             </li>
-            
+
             <li class="menuType">
                 <a key="/recruit_students" href="recruit_students" class="aLink">入学</a>
                 <span class="rightIcon"><i class="iconfont">&#xe61a;</i></span>
@@ -417,7 +425,7 @@
                 <a key="/training_camp" href="training_camp" class="aLink">训练营</a>
                 <span class="rightIcon"><i class="iconfont">&#xe61a;</i></span>
             </li>
-            
+
         </ul>
         <div class="opacity"></div>
     </div>
@@ -427,63 +435,60 @@
          <div class="menu-list-wrapper">
              <div class="nav-wrapper">
                  <div class="first-menu">
-                     
+
                      <ul class="first-menu-right menu-style">
                          <li></li>
                          <li></li>
                      </ul>
                      <ul class="first-menu-left menu-style">
-                         
+
                          <li data-url="/about">
                              <a href="about">关于朗阁</a>
-                             
+
                          </li>
+
                          
-                         <li data-url="/kindergarten">
-                             <a href="kindergarten">幼儿园</a>
-                             
-                         </li>
-                         
+
                          <li data-url="/primary">
                              <a href="primary">小学</a>
-                             
+
                          </li>
-                         
+
                          <li data-url="/middle">
                              <a href="middle">初中</a>
-                             
+
                          </li>
-                         
+
                          <li data-url="/senior">
                              <a href="senior">高中</a>
-                             
+
                          </li>
-                         
+
                          <li data-url="/cooperation_exchange">
                              <a href="cooperation_exchange">合作与交流</a>
-                             
+
                          </li>
-                         
+
                          <li data-url="/recruit">
                              <a href="recruit">应聘</a>
-                             
+
                          </li>
-                         
+
                          <li data-url="/recruit_students">
                              <a href="recruit_students">入学</a>
-                             
+
                          </li>
 
                          <li data-url="/excellent_course">
                             <a href="excellent_course">精品课程</a>
-                            
+
                         </li>
 
                         <li data-url="/training_camp">
                             <a href="training_camp">训练营</a>
-                            
+
                         </li>
-                         
+
                      </ul>
                  </div>
              </div>
@@ -492,18 +497,18 @@
                     <div class="menu-wrapper-logo">
                          <a class="logo-a" href="index.html">
                              <i class="iconfont icon-logo">&#xe636;</i>
-                             
+
 
                          </a>
                     </div>
                      <ul class="second-menu-left menu-style">
-                         
+
                          <li  id="d5ba_e13e_71a3_a567">
-                             
+
                                  <a onclick="hashFun('d5ba_e13e_71a3_a567')" >朗阁首页</a>
-                             
+
                          </li>
-                         
+
                      </ul>
                  </div>
              </div>
@@ -524,8 +529,8 @@
                                 <span class="userImg"></span>
                                 <span class="userImgdefault"></span>
                             </span>
-                
-                            
+
+
                             <ul class="selectTips">
                                 <li class="accountSet">账号设置</li>
                                 <li class="admissionApply">入学申请</li>
@@ -537,43 +542,40 @@
                         <span class="changeLangunge" id="changLanguageButtonMobile"><i class="iconfont iconInnerText">&#xe625;</i></span>
                     </div>
                     <ul class="sliderMenu">
-                        
+
                          <li class="menuType">
                             <a key="/about" href="about" class="aLink">关于朗阁</a>
                             <span class="rightIcon"><i class="iconfont">&#xe61a;</i></span>
                          </li>
-                        
-                        
-                         <li class="menuType">
-                            <a key="/kindergarten" href="kindergarten" class="aLink">幼儿园</a>
-                            <span class="rightIcon"><i class="iconfont">&#xe61a;</i></span>
-                         </li>
-                        
+
+
+                         
+
                          <li class="menuType">
                             <a key="/primary" href="primary" class="aLink">小学</a>
                             <span class="rightIcon"><i class="iconfont">&#xe61a;</i></span>
                          </li>
-                        
+
                          <li class="menuType">
                             <a key="/middle" href="middle" class="aLink">初中</a>
                             <span class="rightIcon"><i class="iconfont">&#xe61a;</i></span>
                          </li>
-                        
+
                          <li class="menuType">
                             <a key="/senior" href="senior" class="aLink">高中</a>
                             <span class="rightIcon"><i class="iconfont">&#xe61a;</i></span>
                          </li>
-                        
+
                          <li class="menuType">
                             <a key="/cooperation_exchange" href="cooperation_exchange" class="aLink">合作与交流</a>
                             <span class="rightIcon"><i class="iconfont">&#xe61a;</i></span>
                          </li>
-                        
+
                          <li class="menuType">
                             <a key="/recruit" href="recruit" class="aLink">应聘</a>
                             <span class="rightIcon"><i class="iconfont">&#xe61a;</i></span>
                          </li>
-                        
+
                          <li class="menuType">
                             <a key="/recruit_students" href="recruit_students" class="aLink">入学</a>
                             <span class="rightIcon"><i class="iconfont">&#xe61a;</i></span>
@@ -588,10 +590,10 @@
                             <a key="/training_camp" href="training_camp" class="aLink">训练营</a>
                             <span class="rightIcon"><i class="iconfont">&#xe61a;</i></span>
                          </li>
-                        
+
                     </ul>
                     <div class="opacity"></div>
-                </div> 
+                </div>
             </div>
             <div class="nav-detail-wrapper">
                 <div class="second-menu-mobile">
@@ -601,20 +603,20 @@
                     </span>
                 </div>
                 <ul class="secondSlideMenu">
-                    
-                    
+
+
                        <span></span>
-                    
-                    
+
+
                 </ul>
-                
+
             </div>
         </div>
     </div>
-</div> 
-    
+</div>
 
-    
+
+
 
     <!-- 将来页面要往这里填充具体的模板内容 -->
     <div class="allModules">
@@ -623,32 +625,38 @@
     <!--此处模板template_id:21--><div id="J_banner_56d1_152c94">
     <div class="section">
        <div class="index-banner">
-            
+
                <div class="yg-banner">
                  <div class="cover"></div>
                  <div class="banner-text">
                     <div class="row">
                         <div class="cols">
-                            
+
                                 <h3 class="banner-title">欢迎来到朗阁精英学校</h3>
-                            
+
                                 <p class="banner-description">让每一位孩子成为最好的自己。</p>
-                             
+
                             <p class="banner-button">
                                <a class="white-button common-button" target=_self href="index.html"></a>
                             </p>
                         </div>
+                        <div style="margin-left: 170px; margin-top: 70px;">
+                            <a class="yg-left-picture-button blue-button">学校入口</a>
+                            <a class="yg-left-picture-button blue-button">教师入口</a>
+                            <a class="yg-left-picture-button blue-button">学生入口</a>
+                        </div>
                     </div>
                  </div>
+                 
                  <div class="banner-img absoluteEle">
-                    
-                    
-                        <div class="resize-img" 
+
+
+                        <div class="resize-img"
                              style="background: url(https://yungu-public.oss-cn-hangzhou.aliyuncs.com/yungu-website/29160938076480348%E7%85%A7%E7%89%87.jpg?x-oss-process=image/resize,m_lfit,w_1240/auto-orient,1) no-repeat center center / cover;"></div>
-                    
+
                 </div>
                </div>
-            
+
        </div>
       <div class="back-cover">
         <img src="https://yungu-xiaozhao.oss-cn-hangzhou.aliyuncs.com/yungu-website/21362980026458090%E9%A6%96%E9%A1%B5.png" class="cover-img"/>
@@ -660,24 +668,24 @@
                         <span>浙公网安备 330100602009823号</span>
                     </span>
                     <span class="yg-footer-left-tips yg-border-right">浙ICP备17004649号</span>
-                    <span class="yg-footer-left-tips">©️ 2016-现在yungu.org版权所有</span>
+                    <span class="yg-footer-left-tips">©️ 2016-现在xx.org版权所有</span>
                 </div>
     </div>
-    
-  
+
+
 </div>
 <script id="test_56d1_152c94" type="application/json">{"txtImgVideo":[{"inputNumber":3,"newWindowState":false,"chineseText":["欢迎来到朗阁学校","让每一位孩子成为最好的自己。",""],"englishText":["Welcome to Hangzhou Yungu School","Bring out the best in every child.",""],"chineseUrl":"","englishUrl":"","imageOrVideo":[{"uid":"rc-upload-1573197064434-9","name":"照片.jpg","status":"done","type":"image/jpeg","size":3628194,"src":"https://yungu-public.oss-cn-hangzhou.aliyuncs.com/yungu-website/29160938076480348%E7%85%A7%E7%89%87.jpg","sourceType":1,"uploadType":1}],"text":["欢迎来到朗阁学校","让每一位孩子成为最好的自己。",""],"url":""}],"templateBuiltInParamsList":[{"type":"ARRAY","classification":4,"name":"txtImgVideo"}]}</script>
 
     </div>
 
-     
+
 
     <!-- 公共的js  -->
     <script src="public/lib/js/jquery.3.1.1.min.js"></script>
     <script src="public/lib/js/swiper.min.js"></script>
     <script src="public/lib/js/secondHeader.js"></script>
     <script src="public/js/mockData.js"></script>
-    
+
     <!-- 填充script外链内容 -->
     <script type="text/javascript" src="public/lib/js/fullpage.min.js"></script><script type="text/javascript" src="public/lib/js/slick.js"></script><script type="text/javascript" src="public/lib/js/jquery.easing.min.js"></script>
     <!-- 合并当前页面的js -->
@@ -688,9 +696,9 @@
                 setTimeout( function(){
                     $('loadIcon').hide()
                     $('#loading').fadeOut()
-                
+
 function getClientHeight() {
-  
+
   var clientHeight=0;
   if(document.body.clientHeight && document.documentElement.clientHeight) {
     var clientHeight = (document.body.clientHeight < document.documentElement.clientHeight)
@@ -729,8 +737,8 @@ $(function() {
   }else{
   	isDots = false
   }
-  
-  
+
+
   $("menu-wrapper ").hide()
     $("#J_banner_56d1_152c94 ").fullpage({
         controlArrows: false,
@@ -742,9 +750,9 @@ $(function() {
         scrollOverflow:false,
       autoScrolling:true
     })
-    
+
   	$("#J_banner_56d1_152c94 .index-banner ").slick({
-        autoplay: true, 
+        autoplay: true,
         arrows: false,
         dots: isDots,
         infinite: true,
@@ -752,8 +760,8 @@ $(function() {
         autoplaySpeed: 3000,
         pauseOnHover: false,
         pauseOnDotsHover: false,
-        
-        
+
+
         responsive: [
           {
             breakpoint: 992,
@@ -787,7 +795,7 @@ $(function() {
 })
                 },800)
             })();
-          
+
         }
     </script>
 

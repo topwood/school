@@ -34,7 +34,7 @@ html, body, .yg-know-more {
 </style>
 
     <script>
-      var OSLOGIN_HOST = "https://yunguid.yungu.org";
+      var OSLOGIN_HOST = "https://yunguid.xx.org";
     </script>
   </head>
 
@@ -204,13 +204,13 @@ html, body, .yg-know-more {
 <!--此处模板template_id:58--><div id="job-iframe_5fe4_d4cf5d">
 <iframe
        
-src='https://www.hotjob.cn/wt/yungu/web/index/social?brandCode=1&request_locale=zh_CN&ticket=&cssLink=https%3A%2F%2Fcareer.yungu.org%2Fpublic%2Fcss%2Fhotjob.css'
+src='https://www.hotjob.cn/wt/yungu/web/index/social?brandCode=1&request_locale=zh_CN&ticket=&cssLink=https%3A%2F%2Fcareer.xx.org%2Fpublic%2Fcss%2Fhotjob.css'
        
         width='100%' height='100%' frameborder='0' class='myframe'></iframe>
 <script>
     (function() {
         window.addEventListener('message', function(event) {
-            if (event.origin !== 'https://www.yungu.org') {
+            if (event.origin !== 'https://www.xx.org') {
                 return;
             }
             var ph = parseInt(event.data, 10);
